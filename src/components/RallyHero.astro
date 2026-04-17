@@ -1,0 +1,21 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  hero_image?: ImageMetadata;
+}
+
+const { hero_image } = Astro.props;
+
+const optimizedBg = hero_image
+  ? await getImage({ src: hero_image, format: 'avif' })
+  : null;
+---
+
+<div
+  class={`rally-hero ${optimizedBg ? 'rally-hero--image' : ''}`}
+  style={optimizedBg ? `--hero-bg: url('${optimizedBg.src}')` : ''}
+>
+  <slot />
+</div>

@@ -1,0 +1,59 @@
+---
+import { Font, Image } from 'astro:assets';
+import '../styles/global.css';
+import logo from '../assets/logo.svg';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Event hub for Winnebago Ekko owners. Find upcoming events, schedules, and resources.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="generator" content={Astro.generator} />
+  <meta name="description" content={description} />
+  <title>{title ? `${title} — Camp EKKO` : 'Camp EKKO'}</title>
+  <Font cssVariable="--font-display" />
+  <Font cssVariable="--font-body" />
+  <Font cssVariable="--font-ui" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <Image src={logo} alt="Camp EKKO" class="logo-img" width="36" height="36" loading="eager"/>
+        <span class="logo-text">Camp <strong>EKKO</strong></span>
+      </a>
+      <nav class="site-nav">
+        <a href="/" class={`nav-link ${currentPath === '/' ? 'nav-link--active' : ''}`}>Events</a>
+        <a href="/archive/" class={`nav-link ${currentPath === '/archive/' ? 'nav-link--active' : ''}`}>Archive</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Camp EKKO &mdash; A hub with event information for Winnebago Ekko owners</p>
+    </div>
+  </footer>
+
+</body>
+</html>

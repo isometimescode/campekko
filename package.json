@@ -1,7 +1,8 @@
 {
   "name": "campekko.com",
   "type": "module",
-  "version": "0.0.1",
+  "description": "Camp EKKO hub",
+  "version": "1.0.0",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -12,6 +13,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/cabin-condensed": "^5.2.8",
+    "@fontsource/lora": "^5.2.8",
+    "@fontsource/source-sans-3": "^5.2.9",
     "astro": "^6.1.6"
   }
 }

@@ -1,46 +1,28 @@
-# Astro Starter Kit: Basics
+# CampEKKO.com
 
-```sh
-npm create astro@latest -- --template basics
+## Adding a new event
+
+1. Add an event file in `src/content/events`.
+2. If images for the event are needed, add them in `src/content/events/assets`
+
+
+## Technical Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+campekko/
+├── astro.config.mjs          # Astro configuration
+├── package.json              # Node.js dependencies and scripts
+├── tsconfig.json             # TypeScript configuration
+├── public/                   # Static assets served at root
+├── src/
+│   ├── content.config.ts     # Content collections schema
+│   ├── assets/               # Optimized general images and media
+│   ├── components/           # Reusable Astro components
+│   ├── content/              # Content collections (Markdown)
+│   │   └── events/           # Event data files
+│   │   └── events/assets/    # Optimized event-specific image files
+│   ├── layouts/              # Page layout components
+│   ├── pages/                # Route-based pages
+│   ├── styles/               # Global stylesheets
+│   └── utils/                # Utility functions
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

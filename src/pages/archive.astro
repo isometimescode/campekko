@@ -6,22 +6,21 @@ import RallyCard from '../components/RallyCard.astro';
 const allEvents = await getCollection('events');
 
 const activeRallies = allEvents
-  .filter(r => !r.data.archived)
+  .filter(r => r.data.archived)
   .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
 ---
 
 <BaseLayout
-  title="Upcoming Events"
-  description="Upcoming Winnebago Ekko owner rallies. Find schedules, registration, and resources for Camp EKKO events."
+  title="Past Events"
+  description="An archive of past Winnebago Ekko owner rallies."
 >
 
   <section class="page-hero">
     <div class="container">
       <div class="page-hero__inner">
-        <p class="page-hero__eyebrow">Winnebago Ekko Owner Community Events</p>
-        <h1 class="page-hero__title">Camp EKKO</h1>
-        <p class="page-hero__sub">Rallies orgranized by volunteers for Ekko owners to connect, explore, and adventure together.</p>
+        <h1 class="page-hero__title">Archived Events</h1>
+        <p class="page-hero__sub">An archive of past Ekko Community events.</p>
       </div>
     </div>
   </section>
@@ -31,7 +30,7 @@ const activeRallies = allEvents
 
       {activeRallies.length > 0 ? (
         <>
-          <h2 class="section-title">Upcoming &amp; Active Events</h2>
+          <h2 class="section-title">Archived Events</h2>
           <div class="rally-grid">
             {activeRallies.map(rally => {
               return (
@@ -42,7 +41,7 @@ const activeRallies = allEvents
         </>
       ) : (
         <div class="empty-state">
-          <p>No upcoming events at the moment. Check back soon, or browse <a href="/archive/">past rallies</a>.</p>
+          <p>No past events at the moment. Check back soon, or browse <a href="/">current rallies</a>.</p>
         </div>
       )}
 

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <!-- Tent / mountain shape -->
+  <polygon points="18,4 32,28 4,28" fill="#4a7c59" opacity="0.9"/>
+  <polygon points="18,10 26,28 10,28" fill="#2d5a3d"/>
+  <!-- Moon/sun accent -->
+  <circle cx="26" cy="10" r="3.5" fill="#f0a830" opacity="0.9"/>
+</svg>
