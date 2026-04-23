@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Event hub for Winnebago Ekko owners. Find upcoming events, schedules, and resources.',
+  description = 'Find upcoming Winnebago Ekko owner events, get registration details, and connect with the community.',
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -27,7 +27,6 @@ const currentPath = Astro.url.pathname;
   <meta name="description" content={description} />
   <title>{title ? `${title} — Camp EKKO` : 'Camp EKKO'}</title>
   <Font cssVariable="--font-display" />
-  <Font cssVariable="--font-body" />
   <Font cssVariable="--font-ui" />
 </head>
 <body>
@@ -41,6 +40,7 @@ const currentPath = Astro.url.pathname;
       <nav class="site-nav">
         <a href="/" class={`nav-link ${currentPath === '/' ? 'nav-link--active' : ''}`}>Events</a>
         <a href="/archive/" class={`nav-link ${currentPath === '/archive/' ? 'nav-link--active' : ''}`}>Archive</a>
+        <a href="/about/" class={`nav-link ${currentPath === '/about/' ? 'nav-link--active' : ''}`}>About</a>
       </nav>
     </div>
   </header>
@@ -51,7 +51,7 @@ const currentPath = Astro.url.pathname;
 
   <footer class="site-footer">
     <div class="container">
-      <p>Camp EKKO &mdash; A hub with event information for Winnebago Ekko owners</p>
+      <p>&copy; 2026 Camp EKKO</p>
     </div>
   </footer>
 

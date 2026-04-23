@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import RallyCard from '../components/RallyCard.astro';
+import EventCard from '../components/EventCard.astro';
 
 const allEvents = await getCollection('events');
 
-const activeRallies = allEvents
+const activeEvents = allEvents
   .filter(r => r.data.archived)
   .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
@@ -13,35 +13,36 @@ const activeRallies = allEvents
 
 <BaseLayout
   title="Past Events"
-  description="An archive of past Winnebago Ekko owner rallies."
+  description="An archive of past Winnebago Ekko owner events."
 >
 
   <section class="page-hero">
     <div class="container">
       <div class="page-hero__inner">
-        <h1 class="page-hero__title">Archived Events</h1>
-        <p class="page-hero__sub">An archive of past Ekko Community events.</p>
+        <div class="page-hero__text">
+          <h1 class="page-hero__title">Past Events</h1>
+          <p class="page-hero__sub">A look back at Camp EKKO gatherings.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="rallies-section">
+  <section class="events-section">
     <div class="container">
 
-      {activeRallies.length > 0 ? (
+      {activeEvents.length > 0 ? (
         <>
-          <h2 class="section-title">Archived Events</h2>
-          <div class="rally-grid">
-            {activeRallies.map(rally => {
+          <div class="event-grid">
+            {activeEvents.map(event => {
               return (
-                <RallyCard slug={rally.id} data={rally.data} />
+                <EventCard slug={event.id} data={event.data} />
               );
             })}
           </div>
         </>
       ) : (
         <div class="empty-state">
-          <p>No past events at the moment. Check back soon, or browse <a href="/">current rallies</a>.</p>
+          <p>No past events at the moment. Check back soon, or browse <a href="/">current events</a>.</p>
         </div>
       )}
 

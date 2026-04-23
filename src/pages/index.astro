@@ -1,48 +1,54 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import RallyCard from '../components/RallyCard.astro';
+import EventCard from '../components/EventCard.astro';
+import hero_img from '../assets/ekko_transparent.png';
 
 const allEvents = await getCollection('events');
 
-const activeRallies = allEvents
+const activeEvents = allEvents
   .filter(r => !r.data.archived)
   .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
-
 ---
 
 <BaseLayout
   title="Upcoming Events"
-  description="Upcoming Winnebago Ekko owner rallies. Find schedules, registration, and resources for Camp EKKO events."
+  description="Upcoming Camp EKKO gatherings for Winnebago Ekko owners — registration, schedules, and community resources."
 >
 
   <section class="page-hero">
     <div class="container">
       <div class="page-hero__inner">
-        <p class="page-hero__eyebrow">Winnebago Ekko Owner Community Events</p>
-        <h1 class="page-hero__title">Camp EKKO</h1>
-        <p class="page-hero__sub">Rallies orgranized by volunteers for Ekko owners to connect, explore, and adventure together.</p>
+        <div class="page-hero__text">
+          <p class="page-hero__eyebrow">Winnebago Ekko Owner Community</p>
+          <h1 class="page-hero__title">Camp EKKO</h1>
+          <p class="page-hero__sub">Volunteer-run gatherings where Ekko owners come together to camp, learn, and explore.</p>
+        </div>
+        <div class="page-hero__van">
+          <Image src={hero_img} alt="Winnebago Ekko RV in a forest at sunset" loading="eager"/>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="rallies-section">
+  <section class="events-section">
     <div class="container">
 
-      {activeRallies.length > 0 ? (
+      {activeEvents.length > 0 ? (
         <>
-          <h2 class="section-title">Upcoming &amp; Active Events</h2>
-          <div class="rally-grid">
-            {activeRallies.map(rally => {
+          <h2 class="section-title">What&#39;s Happening</h2>
+          <div class="event-grid">
+            {activeEvents.map(event => {
               return (
-                <RallyCard slug={rally.id} data={rally.data} />
+                <EventCard slug={event.id} data={event.data} />
               );
             })}
           </div>
         </>
       ) : (
         <div class="empty-state">
-          <p>No upcoming events at the moment. Check back soon, or browse <a href="/archive/">past rallies</a>.</p>
+          <p>No upcoming events at the moment. Check back soon, or browse <a href="/archive/">past events</a>.</p>
         </div>
       )}
 

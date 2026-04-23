@@ -1,0 +1,21 @@
+---
+interface Props {
+  status: string;
+}
+
+const { status = "planned" } = Astro.props;
+
+const statusMap: Record<string, { label: string; cls: string }> = {
+  open:     { label: 'Registration Open', cls: 'open'     },
+  sold_out: { label: 'Sold Out',          cls: 'sold-out' },
+  waitlist: { label: 'Join Waitlist',     cls: 'waitlist' },
+  planning: { label: 'In Planning',       cls: 'planning' },
+  ended:    { label: 'Event Ended',       cls: 'ended'    },
+};
+
+const badge = statusMap[status];
+---
+
+<div class={`event-hero__status-bar event-hero__status-bar--${badge.cls}`}>
+  {badge.label}
+</div>

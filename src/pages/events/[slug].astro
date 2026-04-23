@@ -2,25 +2,24 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { dateFull, dateRange } from '../../utils/dates';
-import StatusBadge from '../../components/StatusBadge.astro';
-import RallyHero from '../../components/RallyHero.astro';
+import EventHero from '../../components/EventHero.astro';
 
 export async function getStaticPaths() {
   const events = await getCollection('events');
-  return events.map(rally => ({
-    params: { slug: rally.id },
-    props: { rally },
+  return events.map(event => ({
+    params: { slug: event.id },
+    props: { event },
   }));
 }
 
-const { rally } = Astro.props;
-const { Content } = await render(rally);
+const { event } = Astro.props;
+const { Content } = await render(event);
 
 const {
   title, date, end_date, location, status,
   hosts, contact_email, fee, capacity,
   external_url, hero_image, links, archived, hookups
-} = rally.data;
+} = event.data;
 
 const isExternal = !!external_url;
 
@@ -29,52 +28,42 @@ const isExternal = !!external_url;
 <BaseLayout title={title}>
 
   <!-- Hero -->
-  <RallyHero hero_image={hero_image}>
-    <div class="container">
-      <div class="rally-hero__inner">
-
-        <StatusBadge status={status}/>
-
-        <h1 class="rally-hero__title">{title}</h1>
-
-        {date && end_date && (
-          <p class="rally-hero__dates">{dateRange(date, end_date)}</p>
-        )}
-        {date && !end_date && (
-          <p class="rally-hero__dates">{dateFull(date)}</p>
-        )}
-
-        <p class="rally-hero__location">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          {location}
-        </p>
-
-      </div>
-    </div>
-  </RallyHero>
+  <EventHero hero_image={hero_image} status={status}>
+    <h1 class="event-hero__title">{title}</h1>
+    {date && end_date && (
+      <p class="event-hero__dates">{dateRange(date, end_date, { weekday: true })}</p>
+    )}
+    {date && !end_date && (
+      <p class="event-hero__dates">{dateFull(date, { weekday: true })}</p>
+    )}
+    <p class="event-hero__location">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      {location}
+    </p>
+  </EventHero>
 
   <!-- Page body -->
   <div class="container">
-    <div class="rally-layout">
+    <div class="event-layout">
 
       <!-- Main content -->
-      <div class="rally-main">
+      <div class="event-main">
         {isExternal && !archived && (
           <div class="stub-message">
-            <p>Please visit the rally site for up-to-date details.</p>
+            <p>Please visit the event site for up-to-date details.</p>
             <a href={external_url} class="btn btn--primary btn--large" target="_blank" rel="noopener">
-              Visit Rally Site
+              Visit Event Site
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         )}
-        <div class="rally-content prose">
+        <div class="event-content prose">
           <Content />
         </div>
       </div>
 
       <!-- Sidebar -->
-      <aside class="rally-sidebar">
+      <aside class="event-sidebar">
 
         {links && links.length > 0 && (
           <div class="sidebar-card">

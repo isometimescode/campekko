@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import StatusBar from './StatusBar.astro';
+
+interface Props {
+  hero_image?: ImageMetadata;
+  status?: string;
+}
+
+const { hero_image, status } = Astro.props;
+
+---
+
+<div class="event-hero">
+  <div class="container">
+    <div class="event-hero__inner">
+      <div class="event-hero__text">
+        <slot />
+      </div>
+      {hero_image && (
+        <div class="event-hero__image">
+          <Image src={hero_image} alt="" />
+        </div>
+      )}
+    </div>
+  </div>
+  {status && (
+    <StatusBar status={status} />
+  )}
+</div>

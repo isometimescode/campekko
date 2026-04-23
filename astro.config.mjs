@@ -14,13 +14,6 @@ export default defineConfig({
         },
         {
             provider: fontProviders.fontsource(),
-            name: 'Lora',
-            cssVariable: '--font-body',
-            weights: [400, 600],
-            styles: ['normal', 'italic'],
-        },
-        {
-            provider: fontProviders.fontsource(),
             name: 'Source Sans 3',
             cssVariable: '--font-ui',
             weights: [400, 600],

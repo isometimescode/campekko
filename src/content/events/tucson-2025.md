@@ -2,7 +2,7 @@
 title: Tucson EKKO Rally 2025
 date: 2025-11-07 8:00:00
 end_date: 2025-11-11 8:00:00
-location: Catalina State Park, Tucson, AZ
+location: Tucson, AZ at Catalina State Park
 status: ended
 archived: true
 hero_image: ./assets/ter.png
