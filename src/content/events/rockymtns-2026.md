@@ -2,9 +2,10 @@
 title: Camp EKKO 2026 - Rocky Mountains
 date: 2026-08-27 8:00:00
 end_date: 2026-08-30 08:00:00
-location: Granby, CO at Sun Outdoors Rocky Mountains
+location: Sun Outdoors Rocky Mountains, Granby, CO
 status: open
 hookups: Full Hookups
+fee: Pay the venue directly for your site reservations
 hosts:
   - Stef & James @theFitRV — and the awesome hosting team Elizabeth, Bryan, Holly, Corinne, Steve, Patrick, David
 links:
@@ -17,6 +18,9 @@ links:
   - label: Sun Outdoors Rocky Mountains
     url: https://www.sunoutdoors.com/colorado/sun-outdoors-rocky-mountains
     style: secondary
+cta_button:
+  label: "See Stef's blog post with all the details!"
+  url: "https://www.thefitrv.com/blog/camp-ekko-2026-is-happening-all-ekko-owners-are-invited/"
 ---
 
 ## Please join your EKKO community at the 2nd Annual Camp EKKO! 🎉
@@ -24,8 +28,6 @@ links:
 This year is a big change from 2025 — we’re holding it at a beautiful full-hookups RV park just 30 minutes from Rocky Mountain National Park in Northern Colorado. The resort has a paddling lake, a rainbow trout fishing lake, bike rentals, two restaurant/bars, pickleball, bocce ball, volleyball, basketball, a swimming pool, a gym, golf cart rentals, and more.
 
 No registration fees — you only pay for your campsite directly to the park.
-
-[See my blog post with all the details!](https://www.thefitrv.com/blog/camp-ekko-2026-is-happening-all-ekko-owners-are-invited/)
 
 ## HOW TO REGISTER
 
