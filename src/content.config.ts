@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const events = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/events' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/events' }),
   schema: ({ image }) =>  z.object({
     title:         z.string(),
     date:          z.date(), // YYYY-MM-DD
@@ -15,9 +15,12 @@ const events = defineCollection({
     contact_email: z.email().optional(),
     fee:           z.string().optional(),
     capacity:      z.string().optional(),
-    external_url:  z.url().optional(),
     hero_image:    image().optional(),
     hookups:       z.string().optional(),
+    cta_button:    z.object({
+      label: z.string(),
+      url:   z.string(),
+    }).optional(),
     links: z.array(z.object({
       label: z.string(),
       url:   z.url(),

@@ -102,7 +102,7 @@
 /* -- Reset -------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
-img, svg { display: block; max-width: 100%; }
+img, svg { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* -- Base --------------------------------------------------- */
@@ -365,11 +365,9 @@ main { flex: 1; }
 .badge--waitlist    { background: var(--green-light); color: var(--white); }
 .badge--planning { background: var(--green-mid); color: var(--amber-light); border: 1px solid var(--amber); }
 .badge--ended    { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
-.badge--external    { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.2); }
 
 /* On light backgrounds (cards) */
 .event-card .badge--ended { background: var(--stone); color: var(--text-light); }
-.event-card .badge--external { background: transparent; color: var(--text-light); border: 1px solid var(--stone); }
 
 /* -- Sections ----------------------------------------------- */
 .events-section { padding: 3.5rem 0 5rem; }
@@ -520,13 +518,13 @@ main { flex: 1; }
 .prose ul, .prose ol { margin: 0.5rem 0 1rem 1.5rem; }
 .prose li { margin-bottom: 0.3rem; }
 
-.prose a {
+.prose a:not(.btn) {
   color: var(--green-mid);
   text-decoration: underline;
   text-decoration-color: var(--green-light);
   text-underline-offset: 2px;
 }
-.prose a:hover { color: var(--amber); }
+.prose a:not(.btn):hover { color: var(--amber); }
 .prose strong { font-weight: 600; color: var(--text-dark); }
 
 .prose table {

@@ -13,8 +13,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.4",
     "@fontsource/cabin-condensed": "^5.2.8",
-    "@fontsource/lora": "^5.2.8",
     "@fontsource/source-sans-3": "^5.2.9",
     "astro": "^6.1.6"
   }

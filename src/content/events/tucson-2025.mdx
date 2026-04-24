@@ -5,9 +5,8 @@ end_date: 2025-11-11 8:00:00
 location: Tucson, AZ at Catalina State Park
 status: ended
 archived: true
-hero_image: ./assets/ter.png
+hero_image: ./assets/ter-logo.png
 hookups: Dry camping only, but bathrooms, showers, and dump station are available
-external_url: https://sites.google.com/view/tucsonekkorally2025
 hosts:
   - Bob Simmons
   - Holly LaTour
@@ -23,8 +22,12 @@ links:
     url: https://www.facebook.com/groups/tucsonekkorally/
     style: secondary
 ---
+import { Image } from 'astro:assets';
+import group_image from "./assets/ter-group-2025.png";
 
-## Event Overview
+<Image src={group_image} alt="Tucson Ekko Rally 2025 Group Photo" />
+
+## The Rally
 
 TER 2025 was a volunteer-driven gathering of Winnebago Ekko owners held at Catalina State Park for the fourth consecutive year. This event centered around connection, learning, and hands-on experiences and was the biggest event yet! Attendees traveled from across the US and Canada to camp together, share ideas, and immerse themselves in all things Ekko.
 

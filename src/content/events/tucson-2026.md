@@ -4,11 +4,13 @@ date: 2026-11-06 8:00:00
 end_date: 2026-11-09 8:00:00
 location: Tucson, AZ at Catalina State Park
 status: planning
-hero_image: ./assets/ter.png
+hero_image: ./assets/ter-logo.png
 hookups: Dry camping only, but bathrooms, showers, and dump station are available
-# external_url: https://sites.google.com/view/tucsonekkorally2026
 contact_email: TucsonEKKORally@gmail.com
 capacity: "100 rigs"
+# cta_button:
+#   label: "Please visit the event site for up-to-date details."
+#   url: https://sites.google.com/view/tucsonekkorally2026
 links:
   # - label: Rally Event Site
   #   url: https://sites.google.com/view/tucsonekkorally2026

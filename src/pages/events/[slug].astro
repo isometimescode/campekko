@@ -18,10 +18,8 @@ const { Content } = await render(event);
 const {
   title, date, end_date, location, status,
   hosts, contact_email, fee, capacity,
-  external_url, hero_image, links, archived, hookups
+  hero_image, links, archived, hookups, cta_button
 } = event.data;
-
-const isExternal = !!external_url;
 
 ---
 
@@ -48,11 +46,11 @@ const isExternal = !!external_url;
 
       <!-- Main content -->
       <div class="event-main">
-        {isExternal && !archived && (
+        {cta_button && (
           <div class="stub-message">
-            <p>Please visit the event site for up-to-date details.</p>
-            <a href={external_url} class="btn btn--primary btn--large" target="_blank" rel="noopener">
-              Visit Event Site
+            <p>{cta_button.label}</p>
+            <a href={cta_button.url} class="btn btn--primary btn--large" target="_blank" rel="noopener">
+              Visit Site
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
