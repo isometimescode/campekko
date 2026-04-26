@@ -4,7 +4,7 @@ import { getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { dateFull, dateRange } from '../../utils/dates';
 import EventHero from '../../components/EventHero.astro';
-import fallbackOgImage from '../../assets/ekko_transparent.png';
+import fallbackOgImage from '../../assets/ekko.png';
 
 export async function getStaticPaths() {
   const events = await getCollection('events');
