@@ -2,8 +2,9 @@
 title: Las Vegas Rally in the Desert 2026
 date: 2026-04-14 8:00:00
 end_date: 2026-04-18 08:00:00
-location: Las Vegas KOA at Sam's Town Journey
+location: KOA Journey at Sam's Town, Las Vegas, NV
 status: ended
+archived: true
 hero_image: ./assets/vegas.jpg
 hookups: Full Hookups
 hosts:
