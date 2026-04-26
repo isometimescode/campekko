@@ -6,12 +6,18 @@ import logo from '../assets/logo.svg';
 interface Props {
   title?: string;
   description?: string;
+  og_image?: string;
+  og_url?: string;
 }
 
 const {
   title,
   description = 'Find upcoming Winnebago Ekko owner events, get registration details, and connect with the community.',
+  og_image,
+  og_url = Astro.url.href,
 } = Astro.props;
+
+const og_title = title ? `${title} — Camp EKKO` : 'Camp EKKO';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -25,7 +31,18 @@ const currentPath = Astro.url.pathname;
 	<link rel="icon" href="/favicon.ico" />
 	<meta name="generator" content={Astro.generator} />
   <meta name="description" content={description} />
-  <title>{title ? `${title} — Camp EKKO` : 'Camp EKKO'}</title>
+  <title>{og_title}</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Camp EKKO" />
+  <meta property="og:title" content={og_title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={og_url} />
+  {og_image && <meta property="og:image" content={og_image} />}
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content={og_image ? 'summary_large_image' : 'summary'} />
+  <meta name="twitter:title" content={og_title} />
+  <meta name="twitter:description" content={description} />
   <Font cssVariable="--font-display" />
   <Font cssVariable="--font-ui" />
 </head>
