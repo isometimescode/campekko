@@ -1,7 +1,7 @@
 ---
 title: Tucson EKKO Rally 2026
 date: 2026-11-06 8:00:00
-end_date: 2026-11-09 8:00:00
+end_date: 2026-11-10 8:00:00
 location: Catalina State Park, Tucson, AZ
 status: planning
 hero_image: ./assets/ter-logo.png
