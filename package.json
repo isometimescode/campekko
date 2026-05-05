@@ -17,6 +17,6 @@
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource/cabin-condensed": "^5.2.8",
     "@fontsource/source-sans-3": "^5.2.9",
-    "astro": "^6.1.6"
+    "astro": "^6.2.2"
   }
 }
