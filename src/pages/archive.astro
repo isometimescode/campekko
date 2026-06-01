@@ -5,9 +5,18 @@ import EventCard from '../components/EventCard.astro';
 
 const allEvents = await getCollection('events');
 
-const activeEvents = allEvents
+const archivedEvents = allEvents
   .filter(r => r.data.archived)
-  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const byYear = archivedEvents.reduce((acc, event) => {
+  const year = event.data.date.getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(event);
+  return acc;
+}, {} as Record<number, typeof archivedEvents>);
+
+const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
 
 ---
 
@@ -21,25 +30,29 @@ const activeEvents = allEvents
       <div class="page-hero__inner">
         <div class="page-hero__text">
           <h1 class="page-hero__title">Past Events</h1>
-          <p class="page-hero__sub">A look back at Camp EKKO gatherings.</p>
+          <p class="page-hero__sub">Browse past EKKO rallies and owner gatherings.</p>
         </div>
       </div>
+    </div>
+    <div class="page-hero__stripes" aria-hidden="true">
+      <span></span><span></span><span></span>
     </div>
   </section>
 
   <section class="events-section">
     <div class="container">
 
-      {activeEvents.length > 0 ? (
-        <>
-          <div class="event-grid">
-            {activeEvents.map(event => {
-              return (
-                <EventCard slug={event.id} data={event.data} />
-              );
-            })}
-          </div>
-        </>
+      {years.length > 0 ? (
+        years.map(year => (
+          <>
+            <h2 class="archive-year">{year}</h2>
+            <div class="event-grid">
+              {byYear[year].map(event => (
+                <EventCard slug={event.id} data={event.data} hideBadge />
+              ))}
+            </div>
+          </>
+        ))
       ) : (
         <div class="empty-state">
           <p>No past events at the moment. Check back soon, or browse <a href="/">current events</a>.</p>

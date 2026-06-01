@@ -1,7 +1,7 @@
 ---
 import { Font, Image } from 'astro:assets';
 import '../styles/global.css';
-import logo from '../assets/logo.svg';
+import siteLogo from '../assets/site-logo.png';
 
 interface Props {
   title?: string;
@@ -52,8 +52,7 @@ const currentPath = Astro.url.pathname;
   <header class="site-header">
     <div class="container">
       <a href="/" class="site-logo">
-        <Image src={logo} alt="Camp EKKO" class="logo-img" width="36" height="36" loading="eager"/>
-        <span class="logo-text">Camp <strong>EKKO</strong></span>
+        <Image src={siteLogo} alt="Camp EKKO" class="logo-img" loading="eager"/>
       </a>
       <nav class="site-nav">
         <a href="/" class={`nav-link ${currentPath === '/' ? 'nav-link--active' : ''}`}>Events</a>

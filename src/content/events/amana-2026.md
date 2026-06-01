@@ -4,6 +4,7 @@ date: 2026-05-15 8:00:00
 end_date: 2026-05-17 8:00:00
 location: Amana RV Park, Amana, IA
 status: ended
+archived: true
 capacity: 95 rigs
 hosts:
   - Kathleen Hanson
