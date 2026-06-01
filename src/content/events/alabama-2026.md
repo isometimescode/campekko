@@ -4,6 +4,7 @@ date: 2026-05-14 8:00:00
 end_date: 2026-05-17 8:00:00
 location: Lake Guntersville SP, Guntersville, AL
 status: ended
+archived: true
 hosts:
   - Charlie Grace
 contact_email: Contact@CharlieGraceAdventures.com

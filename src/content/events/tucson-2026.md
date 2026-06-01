@@ -8,13 +8,13 @@ hero_image: ./assets/ter-logo.png
 hookups: Dry camping only, but bathrooms, showers, and dump station are available
 contact_email: TucsonEKKORally@gmail.com
 capacity: "100 rigs"
-# cta_button:
-#   label: "Please visit the event site for up-to-date details."
-#   url: https://sites.google.com/view/tucsonekkorally2026
+cta_button:
+  label: "Registration will open July 1. Please visit the event site for up-to-date details."
+  url: https://sites.google.com/view/tucsonekkorally2026
 links:
-  # - label: Rally Event Site
-  #   url: https://sites.google.com/view/tucsonekkorally2026
-  #   style: primary
+  - label: Rally Event Site
+    url: https://sites.google.com/view/tucsonekkorally2026
+    style: primary
   - label: Rally Facebook Group
     url: https://www.facebook.com/groups/tucsonekkorally/
     style: secondary
@@ -22,7 +22,7 @@ links:
 
 ## Come celebrate our 5th Annual Tucson Ekko Rally in Catalina State Park!
 
-This event is currently in its planning stages and more information will be posted when available. Space is limited, and we expect this event to sell out as it has in previous years. So keep an eye out for updates!
+This event is currently in its planning stages and more information will be posted when available. Space is limited, and we expect this event to sell out as it has in previous years.
 
 ## About the Location
 
