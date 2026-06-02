@@ -18,9 +18,6 @@ links:
   - label: Facebook Event
     url: https://www.facebook.com/events/4277354042586645
     style: secondary
-cta_button:
-  label: Please visit the Rally Site for up to the date information and registration.
-  url: https://sites.google.com/view/wccmamana2026meetup/
 ---
 
 ## The Meetup
