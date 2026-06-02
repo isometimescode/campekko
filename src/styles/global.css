@@ -570,6 +570,7 @@ main { flex: 1; }
   border-left: 4px solid var(--amber);
   border-radius: var(--radius);
   padding: 1.75rem;
+  margin-bottom: 2rem;
 }
 .stub-message p {
   font-family: var(--font-ui);
