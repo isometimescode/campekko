@@ -3,7 +3,7 @@ title: Camp EKKO 2026 - Rocky Mountains
 date: 2026-08-27 8:00:00
 end_date: 2026-08-30 08:00:00
 location: Sun Outdoors Rocky Mountains, Granby, CO
-status: open
+status: waitlist
 hookups: Full Hookups
 fee: Pay the venue directly for your site reservations
 hosts:
@@ -27,7 +27,21 @@ cta_button:
 
 This year is a big change from 2025 — we’re holding it at a beautiful full-hookups RV park just 30 minutes from Rocky Mountain National Park in Northern Colorado. The resort has a paddling lake, a rainbow trout fishing lake, bike rentals, two restaurant/bars, pickleball, bocce ball, volleyball, basketball, a swimming pool, a gym, golf cart rentals, and more.
 
-No registration fees — you only pay for your campsite directly to the park.
+No registration fees for the rally activities — you only pay for your campsite directly to the park.
+
+## WHAT’S HAPPENING
+
+**Silent Auction** — We’re raising money for [RV Care-a-Vanners](https://www.habitat.org/volunteer/travel-and-build/rv-care-a-vanners), a division of Habitat for Humanity that organizes RVers to work on builds across the country. They’ll be camping onsite — swing by and meet them!
+
+**Festival of Lights** — Dig out your holiday lights, Halloween string lights, disco balls — whatever sparks joy. Set up a lighted display at your campsite after dark. There may even be prizes for the most creative setups!
+
+**Mod Tours** — When you arrive you’ll get a bright green paper. Put it on your windshield whenever you’re open for visitors. Pro tip: jot down a list of your main mods to display alongside it.
+
+**Yarn Circle** — Knitters and crocheters: Donna Pareene is hosting a yarn circle benefiting [Warm Up America](https://warmupamerica.org/), which assembles handmade 7x9" sections into blankets for people in need. Bring #4 weight machine-washable yarn — or start a section before the rally and bring it finished. Patterns available on their site.
+
+**Pickleball** — Open play hosted by Tommy & Tracy Hwang and Diane Kelsay. King of the Court style, no sign-up needed — just show up with your paddle. Loaner paddles available.
+
+**Book Club** — Read *Killer Chardonnay* by Colorado author Katie Lansing before the rally, then gather at Nancy Van Wert’s campsite for a book club social. Bring something to eat or drink that fits the theme!
 
 ## HOW TO REGISTER
 
@@ -40,4 +54,8 @@ Call Sun Outdoors Rocky Mountains directly at *970-557-0200*, then press 4, then
 
 VENDORS: If you offer products or services specific to EKKOs, we’d love to have you! Email stef@thefitrv.com for details—we have a dedicated section for you. In exchange for a spot, we ask that you host informal mini-chats/demos/activities at your campsite throughout Friday and Saturday — repeated a couple of times each day to keep crowds small and the vibe relaxed.
 
-Hope to see you in Granby! 🏕️​​​​​​​​​​​​​​​​
+Hope to see you in Granby! 🏕️
+
+## NEED TO CANCEL?
+
+If you need to cancel your campsite reservation, please email [stef@thefitrv.com](mailto:stef@thefitrv.com) so she can return your site to the reserved block. The rally is now on a waitlist, so your spot won’t go to waste!
