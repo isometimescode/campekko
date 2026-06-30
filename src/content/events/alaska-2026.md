@@ -3,7 +3,7 @@ title: Alaska Mini Rally 2026
 date: 2026-06-28 8:00:00
 end_date: 2026-06-30 8:00:00
 location: Denali State Park, Alaska
-status: open
+status: ended
 hosts:
   - Allyson Parker-Lauck
 hookups: dry camping, pit toilet available
