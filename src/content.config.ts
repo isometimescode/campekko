@@ -8,7 +8,13 @@ const events = defineCollection({
     title:         z.string(),
     date:          z.date(), // YYYY-MM-DD
     end_date:      z.date().optional(),
-    location:      z.string(),
+    location:      z.object({
+      venue: z.string(),
+      city:  z.string(),
+      state: z.string(),
+      lat:   z.number().optional(),
+      long:  z.number().optional(),
+    }),
     status:        z.enum(['open', 'sold_out', 'waitlist', 'planning', 'ended']),
     archived:      z.boolean().optional().default(false),
     hosts:         z.array(z.string()).optional(),

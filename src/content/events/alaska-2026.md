@@ -2,7 +2,12 @@
 title: Alaska Mini Rally 2026
 date: 2026-06-28 8:00:00
 end_date: 2026-06-30 8:00:00
-location: Denali State Park, Alaska
+location:
+  venue: K'esugi Ken Campground
+  city: Trapper Creek
+  state: AK
+  lat: 62.59188517250309
+  long: -150.22947883136962
 status: ended
 archived: true
 hosts:
@@ -16,7 +21,7 @@ links:
     style: primary
 ---
 
-# 2nd Annual Alaska Mini Rally
+# 2nd Annual Alaska Mini Rally in Denali State Park
 
 Hey everybody! Just wanted to give a little more info on the Alaska Mini Rally June 28-30, 2026. I have reserved the group campsite at K’esugi Ken Campground near mile 135 on the Parks Highway. This is about a half hour north of the Talkeetna Junction road, and about 1/4 mile north and on the opposite side of the road of the South Denali Viewpoint rest area/campground.
 

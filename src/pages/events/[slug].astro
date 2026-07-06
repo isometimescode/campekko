@@ -6,6 +6,7 @@ import { dateFull, dateRange } from '../../utils/dates';
 import EventHero from '../../components/EventHero.astro';
 import fallbackOgImage from '../../assets/site-logo-social.jpg';
 import { statusLabels } from '../../utils/eventStatus';
+import { formatLocation, mapsUrl } from '../../utils/location';
 
 export async function getStaticPaths() {
   const events = await getCollection('events');
@@ -24,8 +25,11 @@ const {
   hero_image, links, archived, hookups, cta_button
 } = event.data;
 
+const locationStr = formatLocation(location);
+const directionsUrl = mapsUrl(location);
+
 const dateStr = date && end_date ? dateRange(date, end_date) : date ? dateFull(date) : null;
-const og_description = [title, location, dateStr, statusLabels[status]].filter(Boolean).join(' · ');
+const og_description = [title, locationStr, dateStr, statusLabels[status]].filter(Boolean).join(' · ');
 
 const og_image_src = (await getImage({
   src: hero_image ?? fallbackOgImage,
@@ -45,7 +49,19 @@ const eventSchema = {
   eventStatus: 'https://schema.org/EventScheduled',
   location: {
     '@type': 'Place',
-    name: location,
+    name: location.venue,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: location.city,
+      addressRegion: location.state,
+    },
+    ...(location.lat != null && location.long != null && {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: location.lat,
+        longitude: location.long,
+      },
+    }),
   },
   image: og_image,
 };
@@ -56,7 +72,7 @@ const eventSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
 
   <!-- Hero -->
-  <EventHero hero_image={hero_image} status={status}>
+  <EventHero hero_image={hero_image} hero_alt={title} status={status}>
     <h1 class="event-hero__title">{title}</h1>
     {date && end_date && (
       <p class="event-hero__dates">{dateRange(date, end_date, { weekday: true })}</p>
@@ -66,7 +82,7 @@ const eventSchema = {
     )}
     <p class="event-hero__location">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      {location}
+      {locationStr}
     </p>
   </EventHero>
 
@@ -111,7 +127,7 @@ const eventSchema = {
           <dl class="detail-list">
             {date && end_date && (<><dt>Dates</dt><dd>{dateRange(date, end_date)}</dd></>)}
             {date && !end_date && (<><dt>Date</dt><dd>{dateFull(date)}</dd></>)}
-            {location && (<><dt>Location</dt><dd>{location}</dd></>)}
+            <dt>Location</dt><dd>{locationStr} · <a href={directionsUrl} target="_blank" rel="noopener">Get Directions</a></dd>
             {fee && (<><dt>Fee</dt><dd>{fee}</dd></>)}
             {capacity && (<><dt>Capacity</dt><dd>{capacity}</dd></>)}
             {hookups && (<><dt>Hookups</dt><dd>{hookups}</dd></>)}

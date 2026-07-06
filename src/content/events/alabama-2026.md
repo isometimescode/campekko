@@ -2,13 +2,19 @@
 title: EKKO Campout Lake Guntersville 2026
 date: 2026-05-14 8:00:00
 end_date: 2026-05-17 8:00:00
-location: Lake Guntersville SP, Guntersville, AL
+location:
+  venue: Lake Guntersville SP
+  city: Guntersville
+  state: AL
+  lat: 34.40123149948616
+  long: -86.20382735192614
 status: ended
 archived: true
 hosts:
   - Charlie Grace
 contact_email: Contact@CharlieGraceAdventures.com
 hookups: Full hookups
+fees: Pay the state park directly for your reservation
 links:
   - label: Lake Guntersville State Park
     url: https://www.alapark.com/parks/lake-guntersville-state-park/camping

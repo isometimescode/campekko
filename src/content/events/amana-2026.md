@@ -2,7 +2,12 @@
 title: Amana Mods, Maintenance & Merriment Meetup 2026
 date: 2026-05-15 8:00:00
 end_date: 2026-05-17 8:00:00
-location: Amana RV Park, Amana, IA
+location:
+  venue: Amana RV Park
+  city: Amana
+  state: IA
+  lat: 41.81307207067468
+  long: -91.88102447628401
 status: ended
 archived: true
 capacity: 95 rigs

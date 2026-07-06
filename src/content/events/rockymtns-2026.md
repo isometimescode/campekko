@@ -2,7 +2,12 @@
 title: Camp EKKO 2026 - Rocky Mountains
 date: 2026-08-27 8:00:00
 end_date: 2026-08-30 08:00:00
-location: Sun Outdoors Rocky Mountains, Granby, CO
+location:
+  venue: Sun Outdoors Rocky Mountains
+  city: Granby
+  state: CO
+  lat: 40.101739
+  long: -105.951927
 status: waitlist
 hookups: Full Hookups
 fee: Pay the venue directly for your site reservations

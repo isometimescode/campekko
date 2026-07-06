@@ -2,7 +2,12 @@
 title: Tucson EKKO Rally 2022
 date: 2022-12-07 8:00:00
 end_date: 2022-12-11 8:00:00
-location: Catalina State Park, Tucson, AZ
+location:
+  venue: Catalina State Park
+  city: Tucson
+  state: AZ
+  lat: 32.426290657137365
+  long: -110.916666331234
 status: ended
 archived: true
 capacity: "23 Ekkos"

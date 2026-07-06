@@ -9,6 +9,7 @@ interface Props {
   og_image?: string;
   og_url?: string;
   og_type?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   og_image,
   og_url = Astro.url.href,
   og_type = 'website',
+  noindex = false,
 } = Astro.props;
 
 const og_title = !title ? 'Camp EKKO' : /camp ekko/i.test(title) ? title : `${title} — Camp EKKO`;
@@ -32,8 +34,9 @@ const currentPath = Astro.url.pathname;
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="icon" href="/favicon.ico" />
 	<link rel="sitemap" href="/sitemap-index.xml" />
-	<link rel="canonical" href={og_url} />
+	{!noindex && <link rel="canonical" href={og_url} />}
 	<meta name="generator" content={Astro.generator} />
+	{noindex && <meta name="robots" content="noindex" />}
   <meta name="description" content={description} />
   <title>{og_title}</title>
   <!-- Open Graph -->

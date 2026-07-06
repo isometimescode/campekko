@@ -2,7 +2,12 @@
 title: Tampa EKKO Rally 2026
 date: 2026-01-15 12:00:00
 end_date: 2026-01-18 12:00:00
-location: Forgotten Angels, Valrico, FL
+location:
+  venue: Forgotten Angels
+  city: Valrico
+  state: FL
+  lat: 27.8879032841854
+  long: -82.22977813646979
 status: ended
 archived: true
 hosts:

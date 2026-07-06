@@ -2,7 +2,12 @@
 title: Tucson EKKO Rally 2023
 date: 2023-10-27 8:00:00
 end_date: 2023-11-01 8:00:00
-location: Catalina State Park, Tucson, AZ
+location:
+  venue: Catalina State Park
+  city: Tucson
+  state: AZ
+  lat: 32.426290657137365
+  long: -110.916666331234
 status: ended
 archived: true
 hero_image: ./assets/ter-logo.png

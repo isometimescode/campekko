@@ -2,7 +2,10 @@
 title: "Camp Ekko Purgatory 2025"
 date: 2025-08-15
 end_date: 2025-08-18
-location: "Purgatory Resort, Durango, CO"
+location:
+  venue: Purgatory Resort
+  city: Durango
+  state: CO
 status: ended
 archived: true
 hosts:
