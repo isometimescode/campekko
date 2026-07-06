@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { dateFull, dateRange } from '../../utils/dates';
 import EventHero from '../../components/EventHero.astro';
 import fallbackOgImage from '../../assets/site-logo-social.jpg';
+import { statusLabels } from '../../utils/eventStatus';
 
 export async function getStaticPaths() {
   const events = await getCollection('events');
@@ -24,7 +25,7 @@ const {
 } = event.data;
 
 const dateStr = date && end_date ? dateRange(date, end_date) : date ? dateFull(date) : null;
-const og_description = [title, location, dateStr].filter(Boolean).join(' · ');
+const og_description = [title, location, dateStr, statusLabels[status]].filter(Boolean).join(' · ');
 
 const og_image_src = (await getImage({
   src: hero_image ?? fallbackOgImage,
@@ -32,9 +33,27 @@ const og_image_src = (await getImage({
 })).src;
 const og_image = new URL(og_image_src, Astro.site).href;
 
+const eventUrl = Astro.url.href;
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: title,
+  description: og_description,
+  url: eventUrl,
+  startDate: date?.toISOString(),
+  endDate: end_date?.toISOString(),
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: location,
+  },
+  image: og_image,
+};
+
 ---
 
-<BaseLayout title={title} description={og_description} og_image={og_image} og_url={Astro.url.href}>
+<BaseLayout title={title} description={og_description} og_image={og_image} og_url={eventUrl} og_type="article">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
 
   <!-- Hero -->
   <EventHero hero_image={hero_image} status={status}>

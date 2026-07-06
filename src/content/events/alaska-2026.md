@@ -4,6 +4,7 @@ date: 2026-06-28 8:00:00
 end_date: 2026-06-30 8:00:00
 location: Denali State Park, Alaska
 status: ended
+archived: true
 hosts:
   - Allyson Parker-Lauck
 hookups: dry camping, pit toilet available
