@@ -13,10 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.0",
+    "@astrojs/mdx": "^7.0.3",
     "@astrojs/sitemap": "^3.7.2",
-    "@fontsource/cabin-condensed": "^5.2.8",
-    "@fontsource/source-sans-3": "^5.2.9",
+    "@fontsource/cabin-condensed": "^5.3.0",
+    "@fontsource/source-sans-3": "^5.3.0",
     "astro": "^7.1.3"
   }
 }
