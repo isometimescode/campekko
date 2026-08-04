@@ -2,7 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { occurrencesForDay } from '../../../utils/schedule';
+import { occurrencesForDay, groupByTime } from '../../../utils/schedule';
 import { dateRange } from '../../../utils/dates';
 import townsMap from '../../../assets/schedule/towns-map.png';
 import vendorMap from '../../../assets/schedule/vendor-map.png';
@@ -21,6 +21,20 @@ const vendors = allVendors
 const days = ['Thursday', 'Friday', 'Saturday'] as const;
 const occurrencesByDay = Object.fromEntries(
   days.map((day) => [day, occurrencesForDay(sessions, day)]),
+);
+
+// Block numbers are derived positionally per day, not from the stored
+// `chatBlock` field - that field only reflects a session's primary
+// occurrence, so it's stale on repeat occurrences landing in other blocks.
+const groupsByDay = Object.fromEntries(
+  days.map((day) => {
+    let blockCount = 0;
+    const groups = groupByTime(occurrencesByDay[day]).map((occurrences) => ({
+      occurrences,
+      blockNumber: occurrences.length > 1 ? ++blockCount : null,
+    }));
+    return [day, groups];
+  }),
 );
 
 const categories = [...new Set(sessions.flatMap((s) => s.data.categories))].sort();
@@ -102,32 +116,49 @@ const pageTitle = event ? `${event.data.title}: Full Schedule` : 'Full Schedule'
         <div class="day-section" data-day-section={day}>
           <h2 class="archive-year">{day}</h2>
           <div class="schedule-list">
-            {occurrencesByDay[day].map((occ) => (
-              <details
-                class:list={['schedule-row', { 'schedule-row--highlight': occ.categories.includes('logistics') }]}
-                data-day={day}
-                data-categories={occ.categories.join(' ')}
-              >
-                <summary class="schedule-row__summary">
-                  <span class="schedule-row__time">{occ.startTime}{occ.endTime ? ` – ${occ.endTime}` : ''}</span>
-                  <span class="schedule-row__main">
-                    <span class="schedule-row__title">{occ.title}</span>
-                    <span class="schedule-row__host">
-                      Hosted By: {occ.host}
-                      {occ.otherTimes.length > 0 && (
-                        <span class="schedule-row__repeat-badge">🔁</span>
-                      )}
+            {groupsByDay[day].map(({ occurrences: group, blockNumber }) => {
+              const grouped = group.length > 1;
+              const rows = group.map((occ) => (
+                <details
+                  class:list={['schedule-row', { 'schedule-row--highlight': occ.categories.includes('logistics') }]}
+                  data-day={day}
+                  data-categories={occ.categories.join(' ')}
+                >
+                  <summary class="schedule-row__summary">
+                    {!grouped && (
+                      <span class="schedule-row__time">{occ.startTime}{occ.endTime ? ` – ${occ.endTime}` : ''}</span>
+                    )}
+                    <span class="schedule-row__main">
+                      <span class="schedule-row__title">{occ.title}</span>
+                      <span class="schedule-row__host">
+                        Hosted By: {occ.host}
+                        {occ.otherTimes.length > 0 && (
+                          <span class="schedule-row__repeat-badge">🔁</span>
+                        )}
+                      </span>
                     </span>
-                  </span>
-                  <span class="schedule-row__location">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    {occ.location}
-                  </span>
-                </summary>
-                {repeatDetail(occ.otherTimes) && <p class="schedule-row__repeat-detail">🔁 {repeatDetail(occ.otherTimes)}</p>}
-                {occ.description && <p class="schedule-row__description">{occ.description}</p>}
-              </details>
-            ))}
+                    <span class="schedule-row__location">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                      {occ.location}
+                    </span>
+                  </summary>
+                  {repeatDetail(occ.otherTimes) && <p class="schedule-row__repeat-detail">🔁 {repeatDetail(occ.otherTimes)}</p>}
+                  {occ.description && <p class="schedule-row__description">{occ.description}</p>}
+                </details>
+              ));
+
+              return grouped ? (
+                <div class="chat-block">
+                  <div class="chat-block__header">
+                    <span class="chat-block__time">
+                      {group[0].startTime}{group[0].endTime ? ` – ${group[0].endTime}` : ''}
+                    </span>
+                    {blockNumber && <span class="chat-block__label">Chat Block {blockNumber}</span>}
+                  </div>
+                  <div class="chat-block__rows">{rows}</div>
+                </div>
+              ) : rows;
+            })}
           </div>
         </div>
       ))}
@@ -163,6 +194,7 @@ const pageTitle = event ? `${event.data.title}: Full Schedule` : 'Full Schedule'
   <script>
     const filterBar = document.querySelector('.filter-bar');
     const rows = document.querySelectorAll<HTMLElement>('.schedule-row');
+    const chatBlocks = document.querySelectorAll<HTMLElement>('.chat-block');
     const sections = document.querySelectorAll<HTMLElement>('.day-section');
     const emptyState = document.querySelector<HTMLElement>('[data-empty-state]');
 
@@ -177,6 +209,10 @@ const pageTitle = event ? `${event.data.title}: Full Schedule` : 'Full Schedule'
         const visible = dayMatch && catMatch;
         row.hidden = !visible;
         if (visible) anyVisible = true;
+      });
+      chatBlocks.forEach((block) => {
+        const hasVisibleRow = block.querySelector('.schedule-row:not([hidden])');
+        block.hidden = !hasVisibleRow;
       });
       sections.forEach((section) => {
         const hasVisibleRow = section.querySelector('.schedule-row:not([hidden])');

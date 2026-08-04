@@ -662,6 +662,59 @@ main { flex: 1; }
 
 .schedule-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 3rem; }
 
+.chat-block {
+  border: 1px solid var(--green-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--green-pale);
+  margin: 0.75rem 0;
+}
+
+.chat-block:first-child { margin-top: 0; }
+.chat-block:last-child { margin-bottom: 0; }
+
+.chat-block__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.6rem 1.1rem;
+  background: var(--green-mid);
+}
+
+.chat-block__time {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.chat-block__label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-block__rows { display: flex; flex-direction: column; }
+
+.chat-block__rows .schedule-row {
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid var(--green-light);
+  background: var(--white);
+}
+
+.chat-block__rows .schedule-row:first-child { border-top: none; }
+
+.chat-block__rows .schedule-row__summary { grid-template-columns: 1fr 200px auto; }
+
+.chat-block__rows .schedule-row__description,
+.chat-block__rows .schedule-row__repeat-detail {
+  padding-left: 1.1rem;
+}
+
 .schedule-row {
   background: var(--white);
   border: 1px solid var(--stone);

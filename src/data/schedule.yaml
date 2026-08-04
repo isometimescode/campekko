@@ -28,7 +28,6 @@
   host: anyone with green signs displayed
   location: around campground
   categories:
-  - owner-talk
   - social
   repeatsOn: []
   description: >-
@@ -161,7 +160,6 @@
   location: Vendor Circle, inner area (near 146-149)
   categories:
   - logistics
-  - vendor-talk
   repeatsOn: []
   description: >-
     Bring your chairs and join us in one of the rare moments we will all gather together at once—to kick
@@ -177,7 +175,7 @@
   host: Lara Hunsberger
   location: Campsite 138
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 3:00 PM
@@ -200,7 +198,7 @@
   host: Sue & Rich Bennett
   location: Campsite 140
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 3:00 PM
@@ -226,7 +224,7 @@
   host: Larry & Ty Jones
   location: Campsite 145
   categories:
-  - vendor-talk
+  - chat-session
   - giving-back
   repeatsOn:
   - day: Friday
@@ -251,7 +249,7 @@
   host: Tim Helgeson
   location: Campsite 143
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 3:00 PM
@@ -276,8 +274,7 @@
   host: Grant Wilson
   location: Campsite 137
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 10:30 AM
@@ -295,7 +292,7 @@
   host: Ben Powell
   location: Campsite 164
   categories:
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 3:00 PM
@@ -320,7 +317,7 @@
   host: Larry & Donna Pareene
   location: Campsite 148
   categories:
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 10:30 AM
@@ -339,7 +336,7 @@
   host: Tim Helgeson
   location: Campsite 143
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 4:00 PM
@@ -366,7 +363,7 @@
   host: Sue & Rich Bennett
   location: Campsite 140
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 4:00 PM
@@ -391,7 +388,7 @@
   host: Danielle & Brad Desmet
   location: Campsite 144
   categories:
-  - vendor-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 4:00 PM
@@ -416,7 +413,7 @@
   host: Marek Sawczuk
   location: Campsite 177
   categories:
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 9:00 AM
@@ -434,8 +431,7 @@
   host: James & Stef
   location: Campsite 148
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 12:30 PM
@@ -454,8 +450,7 @@
   host: Grant Wilson
   location: Campsite 137
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 9:00 AM
@@ -473,7 +468,7 @@
   host: Mark & Amy Mulder
   location: Campsite 139
   categories:
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Friday
     startTime: 4:00 PM
@@ -531,8 +526,7 @@
   host: Grant Wilson
   location: Campsite 137
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 2:00 PM
@@ -566,8 +560,7 @@
   host: James Adinaro
   location: Campsite 148
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 9:00 AM
@@ -585,8 +578,7 @@
   host: Grant Wilson
   location: Campsite 137
   categories:
-  - vendor-talk
-  - owner-talk
+  - chat-session
   repeatsOn:
   - day: Saturday
     startTime: 12:30 PM
@@ -638,7 +630,7 @@
   host: Steve McCuskey
   location: Vendor Circle, inner area (near 146-149)
   categories:
-  - owner-talk
+  - social
   repeatsOn: []
   description: >-
     Join the one, the only—Steve McCuskey! He's an (unforgettable😉) EKKO owner you all met if you went
@@ -703,7 +695,6 @@
   location: around campground
   categories:
   - social
-  - owner-talk
   repeatsOn: []
   description: >-
     For those of you giving tours, pop your green signs on your windshields! Others can take a spin through
