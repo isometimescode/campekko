@@ -21,7 +21,7 @@ const { hero_image, hero_alt = '', status } = Astro.props;
       </div>
       {hero_image && (
         <div class="event-hero__image">
-          <Image src={hero_image} alt={hero_alt} />
+          <Image src={hero_image} alt={hero_alt} loading="eager" />
         </div>
       )}
     </div>

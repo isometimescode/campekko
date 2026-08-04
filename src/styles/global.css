@@ -1139,6 +1139,8 @@ main { flex: 1; }
   .schedule-row__description,
   .schedule-row__repeat-detail { display: block !important; }
 
+  .chat-block { break-inside: avoid; }
+
   .day-section { break-before: page; }
   .day-section:first-of-type { break-before: auto; }
 

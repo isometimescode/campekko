@@ -1,11 +1,12 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { occurrencesForDay, groupByTime } from '../../../utils/schedule';
 import { dateRange } from '../../../utils/dates';
 import townsMap from '../../../assets/schedule/towns-map.png';
 import vendorMap from '../../../assets/schedule/vendor-map.png';
+import fallbackOgImage from '../../../assets/site-logo-social.jpg';
 
 const EVENT_ID = 'rockymtns-2026';
 
@@ -54,11 +55,19 @@ const subtitle = event && event.data.date && event.data.end_date
   : null;
 
 const pageTitle = event ? `${event.data.title}: Full Schedule` : 'Full Schedule';
+
+const og_image_src = (await getImage({
+  src: event?.data.hero_image ?? fallbackOgImage,
+  format: 'jpg',
+})).src;
+const og_image = new URL(og_image_src, Astro.site).href;
 ---
 
 <BaseLayout
   title={pageTitle}
   description="Filterable Thursday–Saturday schedule for Camp EKKO 2026 - Rocky Mountains: every chat, activity, and social, by day and category."
+  og_image={og_image}
+  og_url={Astro.url.href}
 >
 
   <section class="page-hero page-hero--small">
@@ -81,11 +90,11 @@ const pageTitle = event ? `${event.data.title}: Full Schedule` : 'Full Schedule'
       <h2 class="section-title">Campground Maps</h2>
       <div class="map-gallery">
         <a href={townsMap.src} target="_blank" rel="noopener" class="map-gallery__item">
-          <Image src={townsMap} alt="Camp EKKO campground map showing town and mayor territories with reference site locations" width={600} class="map-gallery__thumb" />
+          <Image src={townsMap} alt="Camp EKKO campground map showing town and mayor territories with reference site locations" width={600} loading="eager" class="map-gallery__thumb" />
           <span class="map-gallery__caption">Towns &amp; Mayors</span>
         </a>
         <a href={vendorMap.src} target="_blank" rel="noopener" class="map-gallery__item">
-          <Image src={vendorMap} alt="Detail map of the vendor section showing each vendor's campsite location" width={600} class="map-gallery__thumb" />
+          <Image src={vendorMap} alt="Detail map of the vendor section showing each vendor's campsite location" width={600} loading="eager" class="map-gallery__thumb" />
           <span class="map-gallery__caption">Vendor Section Detail</span>
         </a>
       </div>
