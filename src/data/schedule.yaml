@@ -1,0 +1,777 @@
+# Camp EKKO 2026 - Rocky Mountains rally schedule.
+# One entry per unique session; repeat offerings live in `repeatsOn`.
+
+- id: thu-the-camp-ekko-welcome-tent
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 12:00 PM
+  endTime: 6:00 PM
+  chatBlock: null
+  title: 'The Camp EKKO Welcome Tent: get your tshirts, nametags, and more!'
+  host: Stef & friends
+  location: Campsite 148 (in the Vendor Circle)
+  categories:
+  - logistics
+  repeatsOn: []
+  description: >-
+    Off to the races!!! Arrive anytime after 12pm. Right after you get set up in your campsite, head to
+    the Camp EKKO welcome tent! We'll be there ready to greet you, check you in, give you your name tags,
+    and pass out your tshirts which are free with a cash-only donation towards our rally fundraiser: Habitat
+    for Humanity's RV Care-A-Vanners. Bring cash for your shirt donations! 🩷
+- id: thu-mods-tours-begin
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 4:00 PM
+  endTime: 7:00 PM
+  chatBlock: null
+  title: Mods Tours Begin!
+  host: anyone with green signs displayed
+  location: around campground
+  categories:
+  - owner-talk
+  - social
+  repeatsOn: []
+  description: >-
+    Pop your green signs on your windshield and let's kick off the rally with our favorite thing: Mod
+    Tours! If you're not giving tours, bust out your bikes and take a spin through the park seeking out
+    the green signs. It's a great way to meet your EKKO community!
+- id: thu-the-silent-auction-is-open
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 5:00 PM
+  endTime: 7:00 PM
+  chatBlock: null
+  title: The Silent Auction is OPEN
+  host: Elizabeth & Bryan Whitt
+  location: Campsite 148
+  categories:
+  - giving-back
+  repeatsOn: []
+  description: >-
+    Let the bidding BEGIN! Come check out all the amazing donations you can bid on at our fundraiser silent
+    auction! All proceeds go directly to Habitat for Humanity's RV Care-A-Vanners. Swing by and add your
+    bids to whichever prizes interest you most. Winners are required to make your payments via Habitat's
+    online payment portal right at the end of the FBG (Final Big Gathering) on Saturday afternoon. So,
+    credit cards only, no cash or checks accepted for Silent Auction items.
+- id: thu-welcome-tent-is-closed-but
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 6:00 PM
+  chatBlock: null
+  title: Welcome Tent is Closed but…
+  host: Volunteers from Winnebago
+  location: Campsite 148
+  categories:
+  - logistics
+  repeatsOn: []
+  description: >-
+    If you'll be arriving after 6pm, the Camp EKKO Welcome Tent will be closed. But no worries! You can
+    pick up your tshirts (free with cash donation), name-badges, Mod Tour signs etc on Fri morning at
+    8:30 - 9am just before the Rally Kickoff Welcome Messages. If you'll be arriving even later in the
+    day, head to the Winnebago campsites 147-149 and find someone there to help get you checked in.
+- id: thu-mix-mingle-at-your-mayor
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 7:00 PM
+  chatBlock: null
+  title: Mix & Mingle at your Mayor's Place!
+  host: The Mayors, see list to find yours
+  location: around campground
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    The Mayors of each town are hosting a meet & greet at the "Town Hall"—aka their own campsite. Check
+    the list to see which town you're in, then bring your chair, a drink, and have a great time getting
+    to know your townsfolk! 😉
+- id: thu-festival-of-lights
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 8:30 PM
+  endTime: 10:00 PM
+  chatBlock: null
+  title: Festival of Lights
+  host: all with light displays
+  location: around campground
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Opening night of the Festival of Lights! Wander around the campground and look for the lights displays—we
+    can't wait to see the creativity! If you didn't have time to get your display setup tonight, no worries—the
+    Festival continues the next 2 nights, too. Judging will happen on Friday night.
+- id: fri-group-walk
+  event: rockymtns-2026
+  day: Friday
+  startTime: 7:30 AM
+  chatBlock: null
+  title: Group Walk
+  host: TBD
+  location: TBD
+  categories:
+  - wellness
+  - social
+  repeatsOn:
+  - day: Saturday
+    startTime: 7:30 AM
+    location: TBD
+  description: >-
+    Join ____ on an hour-ish long walk/hike on the path across from the resort. Meet other EKKO owners
+    and get some exercise — two things great for your health at once! Dogs who like other dogs and people
+    are welcome too!
+- id: fri-yoga
+  event: rockymtns-2026
+  day: Friday
+  startTime: 7:30 AM
+  chatBlock: null
+  title: Yoga
+  host: Elizabeth
+  location: Fake grass just outside the gym building
+  categories:
+  - wellness
+  repeatsOn:
+  - day: Saturday
+    startTime: 7:30 AM
+    location: Fake grass just outside the gym building
+  description: >-
+    Bring your yoga mat and join Elizabeth in this gentle yoga class for all levels — even total beginners!
+    A great way to start your day.
+- id: fri-check-in-for-late-arrivals
+  event: rockymtns-2026
+  day: Friday
+  startTime: 8:30 AM
+  endTime: 9:00 AM
+  chatBlock: null
+  title: Check-in for Late Arrivals
+  host: Volunteers from Winnebago
+  location: Campsite 148
+  categories:
+  - logistics
+  repeatsOn: []
+  description: >-
+    If you arrived after 6pm last night & the Camp EKKO Welcome Tent was closed, please swing by site
+    148 to check-in: pick up your tshirts, Mod Tour signs, name-badges, etc.
+- id: fri-main-kickoff-chat-welcome-to
+  event: rockymtns-2026
+  day: Friday
+  startTime: 9:00 AM
+  chatBlock: null
+  title: 'Main Kickoff Chat: Welcome to Camp EKKO! Also hear from Winnebago''s EKKO production team'
+  host: Stef & James
+  location: Vendor Circle, inner area (near 146-149)
+  categories:
+  - logistics
+  - vendor-talk
+  repeatsOn: []
+  description: >-
+    Bring your chairs and join us in one of the rare moments we will all gather together at once—to kick
+    off our rally weekend! We'll give some welcome messages, introduce the vendors, talk about the schedule
+    & activities, and then Winnebago will take the 'stage'. There'll be a Q&A at the end with the Winnebago
+    EKKO production team, so bring your questions.
+- id: fri-best-practices-for-maintaining-your
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: Best Practices for Maintaining Your Truma Appliances
+  host: Lara Hunsberger
+  location: Campsite 138
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 3:00 PM
+    location: Campsite 138
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 138
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 138
+  description: >-
+    Lara from Truma will discuss how to maintain your AquaGo and your VarioHeat, plus tips to extend the
+    life of your Truma appliances and get your questions answered.
+- id: fri-fantasy-rv-tours-touring-alaska
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: 'Fantasy RV Tours: Touring Alaska & Canada'
+  host: Sue & Rich Bennett
+  location: Campsite 140
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 3:00 PM
+    location: Campsite 140
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 140
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 140
+  description: >-
+    Have you ever dreamed of exploring Alaska/Canada, but weren't sure where to start? Join Rich and Sue
+    as they share firsthand stories, favorite moments, and travel tips from years of guiding Fantasy adventures.
+    Discover how guided RV travel makes traveling much easier. Attendees get an entry to win a $250 Fuel
+    Card! One winner will be drawn following our Saturday 2:00 PM presentation.You do not need to be present
+    to win!
+- id: fri-habitat-for-humanity-rv-care
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: 'Habitat for Humanity RV Care-A-Vanners: Travel With A Purpose'
+  host: Larry & Ty Jones
+  location: Campsite 145
+  categories:
+  - vendor-talk
+  - giving-back
+  repeatsOn:
+  - day: Friday
+    startTime: 3:00 PM
+    location: Campsite 145
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 145
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 145
+  description: >-
+    Hear from Larry and Ty, longtime Habitat for Humanity RV Care-A-Vanners volunteers, as they share
+    stories from Habitat builds they've worked on — and how you can get involved with this incredible
+    program.
+- id: fri-lithionics-power-systems-made-simple
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: 'Lithionics: Power Systems Made Simple'
+  host: Tim Helgeson
+  location: Campsite 143
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 3:00 PM
+    location: Campsite 143
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 143
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 143
+  description: >-
+    Confused by all the different power options on the market and what sets them apart? Wondering what
+    lithium is, how it's used, and how everything works together? Tim from Lithionics breaks it down in
+    plain English — the lithium ecosystem, key components, and how to navigate the battery space with
+    confidence. Perfect for new owners or anyone looking to better understand the tech behind their adventures.
+- id: fri-q-a-with-grant-solar
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: 'Q&A with Grant: Solar Charging'
+  host: Grant Wilson
+  location: Campsite 137
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 137
+  description: >-
+    Looking to expand your electrical set up? Solar Power is the easiest way to enhance your system! Bring
+    your solar questions to this Q&A chat, and Grant—who is both an EKKO owner and the owner of FreedomVanGo
+    shop in Florida—will share his expert advice.
+- id: fri-stuck-happens-recovery-skills-for
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: 'Stuck Happens: Recovery Skills for the Real World'
+  host: Ben Powell
+  location: Campsite 164
+  categories:
+  - owner-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 3:00 PM
+    location: Campsite 164
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 164
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 164
+  description: >-
+    Exploring rough backroads is fun in an EKKO — but sometimes those roads fight back. EKKO Owner Ben
+    Powell brings 12+ years of off-road recovery training with law enforcement, SAR teams, and clubs across
+    the US. Whether you've never aired down a tire or you've already added a winch, you'll leave knowing
+    exactly what to do when your rig isn't going anywhere on its own.
+- id: fri-what-is-camphosting-like
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: What is Camphosting Like?
+  host: Larry & Donna Pareene
+  location: Campsite 148
+  categories:
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 324
+  description: >-
+    If you've been curious about camphosting, come join Donna & Larry as they lead a discussion about
+    what it's like. They've been camphosting all summer and will share their own experiences and answer
+    your questions. For those of you who have also camphosted before, they invite you to attend and share
+    your own tips and stories as well.
+- id: fri-battery-care-storage-procedures-expanding
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: 'Battery Care: Storage Procedures & Expanding Your System'
+  host: Tim Helgeson
+  location: Campsite 143
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 4:00 PM
+    location: Campsite 143
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 143
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 143
+  description: >-
+    Tim from Lithionics will cover two areas: proper storage procedures & tips for upgrading/expanding
+    your system. Whether you're storing your EKKO for a week or prepping for winter, Tim will cover proper
+    procedures for battery storage, charging best practices, and tips for maximizing battery life. For
+    those of you thinking about upgrading your electrical system, Tim will also discuss what's possible
+    with your EKKO power platform — adding battery, power upgrades, energy management strategies— all
+    without overcomplicating your system.
+- id: fri-fantasy-rv-tours-touring-the
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: 'Fantasy RV Tours: Touring the Sensational Southwest'
+  host: Sue & Rich Bennett
+  location: Campsite 140
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 4:00 PM
+    location: Campsite 140
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 140
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 140
+  description: >-
+    Sue & Rich lead group RV tours and will share their amazing experiences on one they especially love:
+    a tour around the beautiful southwest. They'll also discuss how the group RV tour works and why it's
+    something worth considering. Attendees get an entry to win a $250 fuel card. One winner will be drawn
+    following their Saturday 2pm presentation. You do not need to be present to win.
+- id: fri-how-to-avoid-a-dead
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: How To Avoid a Dead Starter Battery
+  host: Danielle & Brad Desmet
+  location: Campsite 144
+  categories:
+  - vendor-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 4:00 PM
+    location: Campsite 144
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 144
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 144
+  description: >-
+    A non-technical talk about the most important battery in your rig - the one that starts the engine
+    reliably, or leaves you stranded. Whether you're boondocking in the wilderness or parked in a storage
+    lot, House2Start has your back. Come learn how their small, clever product can eliminate a dead starter/chassis
+    battery and maximize battery lifetime. They'll be doing onsite installs, too!
+- id: fri-how-to-fix-your-stuck
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: 'How To Fix Your Stuck Window Struts: + other EKKO tips!'
+  host: Marek Sawczuk
+  location: Campsite 177
+  categories:
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 313
+  description: >-
+    Marek, one of our group experts from the EKKO Owners & Wannabes Facebook group, will be going over
+    the window struts, why they easily get stuck, and the various ways people fix them. Besides the window
+    struts chat, you can also ask him other EKKO-related questions as time allows.
+- id: fri-let-s-talk-poop-best
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: 'Let''s Talk Poop: Best Practices for Your Cassette Toilet'
+  host: James & Stef
+  location: Campsite 148
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 332
+  description: >-
+    Cassette toilets: love 'em or hate ‘em, we've all got one! James & Stef from @theFitRV walk through
+    best practices, maintenance, odor control — and then James shares his latest cassette products inventions;
+    like the soon-to-launch Exhaustrex exhaust system & his brand new toilet pods, the first ever designed
+    specifically for cassettes!
+- id: fri-q-a-with-grant-upgrading
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: 'Q&A with Grant: Upgrading Your Suspension 101'
+  host: Grant Wilson
+  location: Campsite 137
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 137
+  description: >-
+    With so many options on the market, which is right for you? Grant from FreedomVanGo will answer your
+    questions & talk about popular systems & additions to help narrow down what gear will upgrade your
+    adventure.
+- id: fri-stories-from-volunteering-with-the
+  event: rockymtns-2026
+  day: Friday
+  startTime: 11:30 AM
+  chatBlock: 2
+  title: Stories from Volunteering with the National Park Service
+  host: Mark & Amy Mulder
+  location: Campsite 139
+  categories:
+  - owner-talk
+  repeatsOn:
+  - day: Friday
+    startTime: 4:00 PM
+    location: Campsite 139
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 373
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 373
+  description: >-
+    Join EKKO owners Mark and Amy as they share their unforgettable experiences volunteering in a remote
+    national park. Bears, Bigfoot, and Streakers? Oh my! Hear answers to questions such as: Is it safe?
+    Fun? Scary? Learn how you can support our parks and get involved, too.
+- id: fri-pickleball-all-skill-levels-welcome
+  event: rockymtns-2026
+  day: Friday
+  startTime: 1:00 PM
+  endTime: 3:00 PM
+  chatBlock: null
+  title: Pickleball — All Skill Levels Welcome
+  host: Tommy & Tracy Hwang, Diane Kelsay
+  location: Pickleball Court
+  categories:
+  - wellness
+  repeatsOn:
+  - day: Saturday
+    startTime: 1:00 PM
+    location: Pickleball Court
+  description: >-
+    No sign-up needed, just show up and throw your paddle in the queue (loaner paddles available). We'll
+    be playing King of the Court style: winners stay on, next paddles rotate in. Never played before?
+    No problem! It's easy to pick up quickly!
+- id: fri-the-silent-auction-booth-is
+  event: rockymtns-2026
+  day: Friday
+  startTime: 1:00 PM
+  endTime: 3:00 PM
+  chatBlock: null
+  title: The Silent Auction Booth is OPEN
+  host: Volunteers from Winnebago
+  location: Campsite 148
+  categories:
+  - giving-back
+  repeatsOn: []
+  description: >-
+    Come see all the bidding lists and add your own bids to any prizes that interest you! All proceeds
+    go directly to Habitat for Humanity's RV Care-A-Vanners. We've got so many amazing donations!
+- id: fri-q-a-with-grant-ekko
+  event: rockymtns-2026
+  day: Friday
+  startTime: 3:00 PM
+  chatBlock: 3
+  title: 'Q&A with Grant: EKKO Power Systems'
+  host: Grant Wilson
+  location: Campsite 137
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 2:00 PM
+    location: Campsite 137
+  description: >-
+    FreedomVanGo specializes in doing upgrades to EKKO power systems, and Grant is bringing this expertise
+    to this chat where he'll answer all your electrical questions. Even if you're totally new and not
+    looking to upgrade, Grant will also provide tips & best practices for beginners, too.
+- id: fri-knit-crochet-with-donna-for
+  event: rockymtns-2026
+  day: Friday
+  startTime: 3:30 PM
+  chatBlock: null
+  title: Knit & Crochet with Donna for Warm Up America
+  host: Donna Pareene
+  location: Campsite 324
+  categories:
+  - social
+  - giving-back
+  repeatsOn: []
+  description: >-
+    Join Donna in a yarn circle benefiting Warm Up America — a charity that collects handmade 7x9" sections
+    and assembles them into blankets for people in need. Bring your own yarn (#4 weight, machine-washable),
+    any color — and BYOC and BYOD (bring your own chair and your own drink!).
+- id: fri-how-we-drink-the-water
+  event: rockymtns-2026
+  day: Friday
+  startTime: 4:00 PM
+  chatBlock: 4
+  title: 'How We Drink the Water in Our EKKO: Best Practices for Safe Drinking Water'
+  host: James Adinaro
+  location: Campsite 148
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 9:00 AM
+    location: Campsite 332
+  description: >-
+    You don't have to bring bottled water along on your RV trips. With a few simple products and procedures,
+    it's easy to drink the water from your RV's water system, and have one less thing to pack. Learn what
+    you need to do to make your RV's on board water clean, tasty, and most importantly— safe.
+- id: fri-long-showers-on-the-road
+  event: rockymtns-2026
+  day: Friday
+  startTime: 4:00 PM
+  chatBlock: 4
+  title: 'Long Showers On The Road: Infinity Shower'
+  host: Grant Wilson
+  location: Campsite 137
+  categories:
+  - vendor-talk
+  - owner-talk
+  repeatsOn:
+  - day: Saturday
+    startTime: 12:30 PM
+    location: Campsite 137
+  description: >-
+    Tired of 2 minute showers and worrying about your water levels on the road? Get to know the recirculating
+    shower that can change all that. The Infinity Shower catches your shower drain water, filters it and
+    reuses it back out of your showerhead. Treat yourself to a long, hot shower after a long day with
+    the Infinity Shower!
+- id: fri-book-club-social-killer-chardonnay
+  event: rockymtns-2026
+  day: Friday
+  startTime: 5:00 PM
+  chatBlock: null
+  title: 'Book Club Social: Killer Chardonnay'
+  host: Nancy Van Wert
+  location: Campsite 08
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Nancy is hosting a gathering at her campsite for those who read, or even just thought about reading
+    'Killer Chardonnay'! You can talk about the book (or not talk about it!), drink some killer Chardonnay
+    (if you bring some to share!), and meet fellow book loving EKKO owners. Bring your chair AND for fun,
+    bring something to eat or drink that's in theme with the book!
+- id: fri-happy-hour-social-at-both
+  event: rockymtns-2026
+  day: Friday
+  startTime: 5:00 PM
+  chatBlock: null
+  title: Happy Hour Social at both resort bars Ask for an EKKOrita!
+  host: Everyone!
+  location: '2 Locations: Summit Bar & Headwaters Poolside Outdoor Bar'
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Head to the resort for happy hour drinks (on you!), socializing with other EKKO owners, or even mini
+    bowling— which is also located right in the main bar. Wear your name badges and when you see others
+    wearing them, that's your cue to join their table or invite them to yours! Your challenge is to introduce
+    yourself to at least 3 others while there—and to also welcome others who come up to you. 😉 Enjoy either
+    indoor OR outdoor happy houring!
+- id: fri-ekko-lifestyle-let-s-talk
+  event: rockymtns-2026
+  day: Friday
+  startTime: 6:00 PM
+  chatBlock: null
+  title: 'EKKO Lifestyle: Let''s Talk Boondocking & Visiting National Parks'
+  host: Steve McCuskey
+  location: Vendor Circle, inner area (near 146-149)
+  categories:
+  - owner-talk
+  repeatsOn: []
+  description: >-
+    Join the one, the only—Steve McCuskey! He's an (unforgettable😉) EKKO owner you all met if you went
+    to Camp EKKO last year. Steve will lead a fun large-group discussion about 2 things EKKO owners are
+    passionate about: Boondocking & Visiting National Parks. Bring your own stories and tips to share!
+    PA System will be used for this one.
+- id: fri-town-happy-hours
+  event: rockymtns-2026
+  day: Friday
+  startTime: 7:30 PM
+  chatBlock: null
+  title: Town Happy Hours
+  host: The Mayors
+  location: check the list for your Mayor's Campsite
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Bring your chair and head to your Mayor's Place for a fun gathering with your townsfolk. There's no
+    organized plan here, it's just a chance for good conversations, connection, and community. This is
+    a great time to ask questions and get tips & inspiration from fellow EKKO owners!
+- id: fri-festival-of-lights
+  event: rockymtns-2026
+  day: Friday
+  startTime: 8:30 PM
+  endTime: 10:00 PM
+  chatBlock: null
+  title: Festival of Lights
+  host: you!
+  location: everywhere
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Tonight is the display judging! We've asked our friends from Winnebago to act as judges and choose
+    the top 3 most creative displays, and tomorrow Saturday we'll announce the winners and hand out the
+    prizes (donated by Winnebago) at the 5pm FBG gathering. Don't miss it!
+- id: sat-the-silent-auction-is-open
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 10:30 AM
+  endTime: 12:30 PM
+  chatBlock: null
+  title: The Silent Auction is OPEN
+  host: Volunteers from Winnebago
+  location: Campsite 148
+  categories:
+  - giving-back
+  repeatsOn: []
+  description: >-
+    Still time to check on your bids and make some more! All proceeds go directly to Habitat for Humanity's
+    RV Care-A-Vanners, so you're not only buying some cool, you're also doing some good for a deserving
+    charity.🩷 Swing by the auction booth and see all the donations. We've got so many amazing things!
+- id: sat-mod-tours
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 3:00 PM
+  endTime: 5:00 PM
+  chatBlock: null
+  title: Mod Tours!
+  host: anyone with green signs displayed
+  location: around campground
+  categories:
+  - social
+  - owner-talk
+  repeatsOn: []
+  description: >-
+    For those of you giving tours, pop your green signs on your windshields! Others can take a spin through
+    the park seeking out the green signs & taking tours. But remember, tours don't only happen during
+    the official times here on the schedule! Anytime you feel like putting your green sign out, go for
+    it. Anytime you see a green sign, swing in and take a look!
+- id: sat-the-silent-auction-is-open-1
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 3:00 PM
+  endTime: 4:30 PM
+  chatBlock: null
+  title: 'The Silent Auction is OPEN: LAST CHANCE!'
+  host: Volunteers from Winnebago
+  location: Campsite 148
+  categories:
+  - giving-back
+  repeatsOn: []
+  description: >-
+    Last chance to check on your bids! If you win, be prepared to make your payment at the Big Final Gathering
+    at 5pm once you're announced as the winner. Again, no cash or checks will be accepted—credit cards
+    only. Thanks to everyone for your auction donations!
+- id: sat-the-fbg-final-big-gathering
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 5:00 PM
+  chatBlock: null
+  title: 'The FBG: (Final Big Gathering). Announcing Winners, Group Photo Time, +More! (Bring Chair!)'
+  host: Stef & James & friends!
+  location: Vendor Circle, inner area (near 146-149)
+  categories:
+  - logistics
+  - social
+  repeatsOn: []
+  description: >-
+    During the final time we all gather, bring a chair and wear your Camp EKKO shirts as we'll be getting
+    a group pic! We'll announce the silent auction winners, hand RV Care-A-Vanners a big fat check, announce
+    the 3 winners of the Festival of Lights most creative displays (with prizes donated by Winnebago!),
+    and a few other things before we head over to the resort for our group dinner.
+- id: sat-dinner-at-the-resort-restaurant
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 6:00 PM
+  chatBlock: null
+  title: 'Dinner at the Resort Restaurant: Arrive anytime between 6 - 8pm!'
+  host: Resort staff
+  location: Resort ballroom + outdoor patio/bar
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    The resort is closing down one of the restaurants just for us! They'll be offering a meal for a fee,
+    with the entire ballroom set up for tables plus all the outdoor tables and the outdoor bar so there's
+    plenty of room for everyone. Not necessary to arrive right at 6pm, in fact they really hope you'll
+    all stagger your arrival. As long as you're there by 8pm, they'll be happy to take care of you! And
+    then you can stay as long as you like.
+- id: sat-festival-of-lights-last-night
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 8:30 PM
+  endTime: 10:00 PM
+  chatBlock: null
+  title: Festival of Lights — last night!
+  host: you!
+  location: everywhere
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    This is your last chance to stroll around the campground after dark and see all the creative displays.
+    Winners were announced earlier — go check out the winning displays!

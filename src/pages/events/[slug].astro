@@ -19,6 +19,9 @@ export async function getStaticPaths() {
 const { event } = Astro.props;
 const { Content } = await render(event);
 
+const scheduleEntries = await getCollection('schedule');
+const hasSchedule = scheduleEntries.some((s) => s.data.event.id === event.id);
+
 const {
   title, date, end_date, location, status,
   hosts, contact_email, fee, capacity,
@@ -108,6 +111,13 @@ const eventSchema = {
 
       <!-- Sidebar -->
       <aside class="event-sidebar">
+
+        {hasSchedule && (
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__title">Full Schedule</h3>
+            <a href={`/events/${event.id}/schedule/`} class="btn btn--primary btn--full">View Full Schedule →</a>
+          </div>
+        )}
 
         {links && links.length > 0 && (
           <div class="sidebar-card">

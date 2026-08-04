@@ -201,6 +201,15 @@ main { flex: 1; }
 .page-hero__text { padding-bottom: 2.5rem; }
 
 /* Small label — used above a page title (archive, about) */
+.page-hero__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-light);
+  margin-bottom: 0.5rem;
+}
 
 /* Large standalone tagline — used on the homepage with no title below */
 .page-hero__tagline {
@@ -506,6 +515,273 @@ main { flex: 1; }
   .event-sidebar { order: -1; }
 }
 
+/* -- Schedule ------------------------------------------------- */
+.schedule-section { padding: 1.5rem 0 2.5rem; }
+
+.map-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.map-gallery__item {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.map-gallery__item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.map-gallery__thumb {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.map-gallery__caption {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.vendor-card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.vendor-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+}
+
+.vendor-card__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.vendor-card__location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+
+.vendor-card__location svg { flex-shrink: 0; color: var(--text-light); }
+
+.vendor-card__note {
+  align-self: flex-start;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-pale);
+  border-radius: var(--radius-sm);
+  padding: 0.15rem 0.5rem;
+}
+
+.vendor-card__description {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-right: 0.25rem;
+}
+
+.filter-btn {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.filter-btn:hover { border-color: var(--green-light); }
+.filter-btn--active { background: var(--green-mid); border-color: var(--green-mid); color: var(--white); }
+
+.schedule-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 3rem; }
+
+.schedule-row {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+
+.schedule-row:hover { border-color: var(--green-light); }
+
+.schedule-row--highlight {
+  background: var(--amber-pale);
+  border-color: var(--amber-light);
+  border-left: 4px solid var(--amber);
+}
+
+.schedule-row--highlight:hover { border-color: var(--amber); }
+
+.schedule-row__summary {
+  display: grid;
+  grid-template-columns: 170px 1fr 200px auto;
+  align-items: start;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.schedule-row__summary::-webkit-details-marker { display: none; }
+
+.schedule-row__summary::after {
+  content: '▸';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  align-self: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--green-pale);
+  color: var(--green-mid);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.schedule-row:hover .schedule-row__summary::after { background: var(--green-mid); color: var(--white); }
+.schedule-row[open] .schedule-row__summary::after { transform: rotate(90deg); }
+
+.schedule-row__time {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--amber);
+  white-space: nowrap;
+}
+
+.schedule-row__main { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+
+.schedule-row__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+
+.schedule-row__host {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.schedule-row__location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+
+.schedule-row__location svg { flex-shrink: 0; color: var(--text-light); }
+
+.schedule-row__repeat-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+
+.schedule-row__repeat-detail {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+  padding: 0 1.1rem 0.25rem calc(170px + 1.1rem + 1rem);
+}
+
+.schedule-row__description {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  padding: 0 1.1rem 1rem calc(170px + 1.1rem + 1rem);
+}
+
+@media (max-width: 700px) {
+  .schedule-row__summary {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'time toggle' 'main main' 'location location';
+  }
+  .schedule-row__time { grid-area: time; }
+  .schedule-row__summary::after { grid-area: toggle; }
+  .schedule-row__main { grid-area: main; }
+  .schedule-row__location { grid-area: location; }
+  .schedule-row__repeat-detail { padding: 0 1.1rem 0.25rem; }
+  .schedule-row__description { padding: 0 1.1rem 1rem; }
+}
+
 /* -- Prose -------------------------------------------------- */
 .prose {
   font-family: var(--font-body);
@@ -781,4 +1057,37 @@ main { flex: 1; }
   .event-grid { grid-template-columns: 1fr; }
   .page-hero  { padding: 2.5rem 0 2rem; }
   .site-header .container { height: 56px; }
+}
+
+/* -- Print ---------------------------------------------------
+   Scoped mainly to the schedule page, so it works as a printed
+   backup when campground wifi/cell service is unreliable.
+   ---------------------------------------------------------- */
+@media print {
+  .site-header, .site-footer, .page-hero__stripes { display: none; }
+
+  .page-hero {
+    background: none;
+    color: var(--text-dark);
+    padding: 0.5rem 0;
+  }
+  .page-hero__title, .page-hero__label, .page-hero__sub { color: var(--text-dark); }
+
+  .filter-bar, .empty-state { display: none !important; }
+
+  .map-gallery__item { box-shadow: none; break-inside: avoid; }
+  .map-gallery__thumb { height: 160px; }
+
+  .schedule-row {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  .schedule-row__summary::after { display: none; }
+  .schedule-row__description,
+  .schedule-row__repeat-detail { display: block !important; }
+
+  .day-section { break-before: page; }
+  .day-section:first-of-type { break-before: auto; }
+
+  .vendor-card { box-shadow: none; break-inside: avoid; }
 }

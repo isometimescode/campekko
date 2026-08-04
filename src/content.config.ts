@@ -1,5 +1,5 @@
-import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { defineCollection, reference } from 'astro:content';
+import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const events = defineCollection({
@@ -35,4 +35,36 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { events };
+const schedule = defineCollection({
+  loader: file('src/data/schedule.yaml'),
+  schema: z.object({
+    event:       reference('events'),
+    day:         z.enum(['Thursday', 'Friday', 'Saturday']),
+    startTime:   z.string(),
+    endTime:     z.string().optional(),
+    chatBlock:   z.number().min(1).max(4).nullable().default(null),
+    title:       z.string(),
+    host:        z.string(),
+    location:    z.string(),
+    categories:  z.array(z.string()).min(1),
+    repeatsOn:   z.array(z.object({
+      day:       z.enum(['Thursday', 'Friday', 'Saturday']),
+      startTime: z.string(),
+      location:  z.string(),
+    })).default([]),
+    description: z.string().optional(),
+  }),
+});
+
+const vendors = defineCollection({
+  loader: file('src/data/vendors.yaml'),
+  schema: z.object({
+    event:       reference('events'),
+    name:        z.string(),
+    location:    z.string().optional(), // omitted when not onsite (e.g. a remote sponsor)
+    note:        z.string().optional(), // e.g. "Onsite Saturday only"
+    description: z.string(),
+  }),
+});
+
+export const collections = { events, schedule, vendors };
