@@ -99,25 +99,6 @@
     Opening night of the Festival of Lights! Wander around the campground and look for the lights displays—we
     can't wait to see the creativity! If you didn't have time to get your display setup tonight, no worries—the
     Festival continues the next 2 nights, too. Judging will happen on Friday night.
-- id: fri-group-walk
-  event: rockymtns-2026
-  day: Friday
-  startTime: 7:30 AM
-  chatBlock: null
-  title: Group Walk
-  host: TBD
-  location: TBD
-  categories:
-  - wellness
-  - social
-  repeatsOn:
-  - day: Saturday
-    startTime: 7:30 AM
-    location: TBD
-  description: >-
-    Join ____ on an hour-ish long walk/hike on the path across from the resort. Meet other EKKO owners
-    and get some exercise — two things great for your health at once! Dogs who like other dogs and people
-    are welcome too!
 - id: fri-yoga
   event: rockymtns-2026
   day: Friday
@@ -688,7 +669,7 @@
   event: rockymtns-2026
   day: Saturday
   startTime: 3:00 PM
-  endTime: 5:00 PM
+  endTime: 4:30 PM
   chatBlock: null
   title: Mod Tours!
   host: anyone with green signs displayed
@@ -720,7 +701,7 @@
 - id: sat-the-fbg-final-big-gathering
   event: rockymtns-2026
   day: Saturday
-  startTime: 5:00 PM
+  startTime: 4:30 PM
   chatBlock: null
   title: 'The FBG: (Final Big Gathering). Announcing Winners, Group Photo Time, +More! (Bring Chair!)'
   host: Stef & James & friends!
@@ -737,20 +718,36 @@
 - id: sat-dinner-at-the-resort-restaurant
   event: rockymtns-2026
   day: Saturday
-  startTime: 6:00 PM
+  startTime: 5:30 PM
+  endTime: 8:00 PM
   chatBlock: null
-  title: 'Dinner at the Resort Restaurant: Arrive anytime between 6 - 8pm!'
+  title: 'Dinner at the Resort "Headwaters Tavern" Restaurant: Arrive anytime between 5:30 - 8pm!'
   host: Resort staff
-  location: Resort ballroom + outdoor patio/bar
+  location: Headwaters Tavern + Resort ballroom + outdoor patio/bar
   categories:
   - social
   repeatsOn: []
   description: >-
-    The resort is closing down one of the restaurants just for us! They'll be offering a meal for a fee,
-    with the entire ballroom set up for tables plus all the outdoor tables and the outdoor bar so there's
-    plenty of room for everyone. Not necessary to arrive right at 6pm, in fact they really hope you'll
-    all stagger your arrival. As long as you're there by 8pm, they'll be happy to take care of you! And
-    then you can stay as long as you like.
+    The resort will be offering an "All American Cookout" meal for a fee, with the entire ballroom set
+    up with tables, plus all the outdoor tables and the outdoor bar so there's plenty of room for everyone.
+    Not necessary to arrive right at 5:30pm, in fact they really hope you'll all stagger your arrival to
+    keep the lines down. As long as you're there by 8pm, they'll be happy to take care of you! And then
+    you can stay as long as you like & enjoy the live music.
+- id: sat-live-music-by-jon-licht
+  event: rockymtns-2026
+  day: Saturday
+  startTime: 7:00 PM
+  endTime: 9:00 PM
+  chatBlock: null
+  title: Live Music by Jon Licht at the resort, courtesy of Winnebago!
+  host: Resort
+  location: Headwaters Tavern outdoor patio/bar
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Whether you purchase a resort meal or not, come join us for live music by singer/guitarist Jon Licht
+    & socializing at the resort. Bring your song requests! Thank you Winnebago for arranging this!
 - id: sat-festival-of-lights-last-night
   event: rockymtns-2026
   day: Saturday
