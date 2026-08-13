@@ -10,6 +10,7 @@ location:
   long: -115.06005527805122
 status: ended
 archived: true
+series: vegas
 hero_image: ./assets/vegas.jpg
 hookups: Full Hookups
 hosts:

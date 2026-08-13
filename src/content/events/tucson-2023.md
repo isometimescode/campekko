@@ -10,6 +10,7 @@ location:
   long: -110.916666331234
 status: ended
 archived: true
+series: tucson
 hero_image: ./assets/ter-logo.png
 hookups: Dry camping only, but bathrooms, showers, and dump station are available
 hosts:

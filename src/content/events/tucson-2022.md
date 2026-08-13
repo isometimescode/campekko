@@ -10,6 +10,7 @@ location:
   long: -110.916666331234
 status: ended
 archived: true
+series: tucson
 capacity: "23 Ekkos"
 links:
   - label: Rally Event Site

@@ -10,6 +10,7 @@ location:
   long: -82.22977813646979
 status: ended
 archived: true
+series: tampa
 hosts:
   - Marina Bredda
   - Komal Bhojwani

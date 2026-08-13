@@ -17,6 +17,7 @@ const events = defineCollection({
     }),
     status:        z.enum(['open', 'sold_out', 'waitlist', 'planning', 'ended']),
     archived:      z.boolean().optional().default(false),
+    series:        z.string().optional(), // shared key for related events (e.g. same rally across years, or a numbered event like "camp-ekko"); independent of title/location
     hosts:         z.array(z.string()).optional(),
     contact_email: z.email().optional(),
     fee:           z.string().optional(),

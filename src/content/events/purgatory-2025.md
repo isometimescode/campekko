@@ -8,6 +8,7 @@ location:
   state: CO
 status: ended
 archived: true
+series: camp-ekko
 hosts:
   - "Stef & James Adinaro (The Fit RV)"
   - "Holly LaTour"

@@ -25,8 +25,13 @@ const hasSchedule = scheduleEntries.some((s) => s.data.event.id === event.id);
 const {
   title, date, end_date, location, status,
   hosts, contact_email, fee, capacity,
-  hero_image, links, archived, hookups, cta_button
+  hero_image, links, archived, hookups, cta_button, series
 } = event.data;
+
+const allEvents = series ? await getCollection('events') : [];
+const relatedEvents = allEvents
+  .filter((e) => e.data.series === series && e.id !== event.id)
+  .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
 
 const locationStr = formatLocation(location);
 const directionsUrl = mapsUrl(location);
@@ -157,6 +162,17 @@ const eventSchema = {
           <div class="sidebar-card">
             <h3 class="sidebar-card__title">Contact</h3>
             <a href={`mailto:${contact_email}`} class="contact-email">{contact_email}</a>
+          </div>
+        )}
+
+        {relatedEvents.length > 0 && (
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__title">Related Events</h3>
+            <ul class="hosts-list">
+              {relatedEvents.map(e => (
+                <li><a href={`/events/${e.id}/`}>{e.data.title}</a></li>
+              ))}
+            </ul>
           </div>
         )}
 

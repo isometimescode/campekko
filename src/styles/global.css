@@ -953,6 +953,8 @@ main { flex: 1; }
 }
 .hosts-list li { padding: 0.3rem 0; border-bottom: 1px solid var(--green-pale); color: var(--text-mid); }
 .hosts-list li:last-child { border-bottom: none; }
+.hosts-list a { color: var(--green-mid); text-decoration: none; }
+.hosts-list a:hover { color: var(--amber); text-decoration: underline; }
 
 .contact-email {
   font-family: var(--font-ui);
