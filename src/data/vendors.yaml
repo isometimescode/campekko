@@ -46,13 +46,14 @@
     Oregon. You can get your hands on them and compare the differences. (But of course the FitRV
     versions are the ones you want. ;) )
 
-- id: freedomvango
+- id: inhabit-mats
   event: rockymtns-2026
-  name: FreedomVanGo
+  name: Inhabit Mats
   location: Campsite 137
   description: >-
-    Grant is the owner of FreedomVanGo, a well-known upfitters shop within the EKKOsphere. He'll be
-    leading loads of talks and also welcomes you to swing by anytime with questions or just to say hi.
+    Inhabit Design is a very popular company with EKKO owners; they make awesome floor mats that cover
+    the entire EKKO floor. They also have other products, so make sure to swing by and check out their
+    stuff!
 
 - id: house2start
   event: rockymtns-2026
@@ -87,15 +88,6 @@
   description: >-
     CampRight makes an "L-shaped" dinette kit for TREKKOs. You've got to see these! Swing by and check
     out how fantastic their dinettes are!
-
-- id: inhabit-mats
-  event: rockymtns-2026
-  name: Inhabit Mats
-  location: Campsite 6
-  description: >-
-    Inhabit Design is a very popular company with EKKO owners; they make awesome floor mats that cover
-    the entire EKKO floor. They also have other products, so make sure to swing by and check out their
-    stuff!
 
 - id: la-mesa-rvs
   event: rockymtns-2026

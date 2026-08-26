@@ -68,6 +68,20 @@
     pick up your tshirts (free with cash donation), name-badges, Mod Tour signs etc on Fri morning at
     8:30 - 9am just before the Rally Kickoff Welcome Messages. If you'll be arriving even later in the
     day, head to the Winnebago campsites 147-149 and find someone there to help get you checked in.
+- id: thu-dolly-parton-tribute
+  event: rockymtns-2026
+  day: Thursday
+  startTime: 6:30 PM
+  endTime: 6:45 PM
+  chatBlock: null
+  title: Dolly Parton Tribute
+  host: Beth Adam
+  location: Campsite 101
+  categories:
+  - social
+  repeatsOn: []
+  description: >-
+    Beth Adam invites you to swing by her campsite where she'll be playing songs by Dolly Parton & showing videos.
 - id: thu-mix-mingle-at-your-mayor
   event: rockymtns-2026
   day: Thursday
@@ -246,24 +260,6 @@
     lithium is, how it's used, and how everything works together? Tim from Lithionics breaks it down in
     plain English — the lithium ecosystem, key components, and how to navigate the battery space with
     confidence. Perfect for new owners or anyone looking to better understand the tech behind their adventures.
-- id: fri-q-a-with-grant-solar
-  event: rockymtns-2026
-  day: Friday
-  startTime: 10:30 AM
-  chatBlock: 1
-  title: 'Q&A with Grant: Solar Charging'
-  host: Grant Wilson
-  location: Campsite 137
-  categories:
-  - chat-session
-  repeatsOn:
-  - day: Saturday
-    startTime: 10:30 AM
-    location: Campsite 137
-  description: >-
-    Looking to expand your electrical set up? Solar Power is the easiest way to enhance your system! Bring
-    your solar questions to this Q&A chat, and Grant—who is both an EKKO owner and the owner of FreedomVanGo
-    shop in Florida—will share his expert advice.
 - id: fri-stuck-happens-recovery-skills-for
   event: rockymtns-2026
   day: Friday
@@ -289,6 +285,24 @@
     Powell brings 12+ years of off-road recovery training with law enforcement, SAR teams, and clubs across
     the US. Whether you've never aired down a tire or you've already added a winch, you'll leave knowing
     exactly what to do when your rig isn't going anywhere on its own.
+- id: fri-suspension-upgrades-discussion
+  event: rockymtns-2026
+  day: Friday
+  startTime: 10:30 AM
+  chatBlock: 1
+  title: Suspension Upgrades Discussion
+  host: Brian Whidden
+  location: Campsite 137
+  categories:
+  - chat-session
+  repeatsOn:
+  - day: Saturday
+    startTime: 10:30 AM
+    location: Campsite 137
+  description: >-
+    If you're interested in doing some suspension upgrades, or if you've already done some that you'd
+    like to recommend, come join this discussion. Brian will also share the upgrades he's done and will
+    try to answer any questions you might have.
 - id: fri-what-is-camphosting-like
   event: rockymtns-2026
   day: Friday
@@ -422,24 +436,6 @@
     best practices, maintenance, odor control — and then James shares his latest cassette products inventions;
     like the soon-to-launch Exhaustrex exhaust system & his brand new toilet pods, the first ever designed
     specifically for cassettes!
-- id: fri-q-a-with-grant-upgrading
-  event: rockymtns-2026
-  day: Friday
-  startTime: 11:30 AM
-  chatBlock: 2
-  title: 'Q&A with Grant: Upgrading Your Suspension 101'
-  host: Grant Wilson
-  location: Campsite 137
-  categories:
-  - chat-session
-  repeatsOn:
-  - day: Saturday
-    startTime: 9:00 AM
-    location: Campsite 137
-  description: >-
-    With so many options on the market, which is right for you? Grant from FreedomVanGo will answer your
-    questions & talk about popular systems & additions to help narrow down what gear will upgrade your
-    adventure.
 - id: fri-stories-from-volunteering-with-the
   event: rockymtns-2026
   day: Friday
@@ -486,36 +482,18 @@
 - id: fri-the-silent-auction-booth-is
   event: rockymtns-2026
   day: Friday
-  startTime: 1:00 PM
-  endTime: 3:00 PM
+  startTime: 9:00 AM
+  endTime: 5:00 PM
   chatBlock: null
-  title: The Silent Auction Booth is OPEN
+  title: Silent Auction is OPEN
   host: Volunteers from Winnebago
   location: Campsite 148
   categories:
   - giving-back
   repeatsOn: []
   description: >-
-    Come see all the bidding lists and add your own bids to any prizes that interest you! All proceeds
-    go directly to Habitat for Humanity's RV Care-A-Vanners. We've got so many amazing donations!
-- id: fri-q-a-with-grant-ekko
-  event: rockymtns-2026
-  day: Friday
-  startTime: 3:00 PM
-  chatBlock: 3
-  title: 'Q&A with Grant: EKKO Power Systems'
-  host: Grant Wilson
-  location: Campsite 137
-  categories:
-  - chat-session
-  repeatsOn:
-  - day: Saturday
-    startTime: 2:00 PM
-    location: Campsite 137
-  description: >-
-    FreedomVanGo specializes in doing upgrades to EKKO power systems, and Grant is bringing this expertise
-    to this chat where he'll answer all your electrical questions. Even if you're totally new and not
-    looking to upgrade, Grant will also provide tips & best practices for beginners, too.
+    Feel free to check on your bids anytime throughout the day. NOTE: This is weather permitting! During
+    high winds or rain, bidding is closed.
 - id: fri-knit-crochet-with-donna-for
   event: rockymtns-2026
   day: Friday
@@ -550,25 +528,6 @@
     You don't have to bring bottled water along on your RV trips. With a few simple products and procedures,
     it's easy to drink the water from your RV's water system, and have one less thing to pack. Learn what
     you need to do to make your RV's on board water clean, tasty, and most importantly— safe.
-- id: fri-long-showers-on-the-road
-  event: rockymtns-2026
-  day: Friday
-  startTime: 4:00 PM
-  chatBlock: 4
-  title: 'Long Showers On The Road: Infinity Shower'
-  host: Grant Wilson
-  location: Campsite 137
-  categories:
-  - chat-session
-  repeatsOn:
-  - day: Saturday
-    startTime: 12:30 PM
-    location: Campsite 137
-  description: >-
-    Tired of 2 minute showers and worrying about your water levels on the road? Get to know the recirculating
-    shower that can change all that. The Infinity Shower catches your shower drain water, filters it and
-    reuses it back out of your showerhead. Treat yourself to a long, hot shower after a long day with
-    the Infinity Shower!
 - id: fri-book-club-social-killer-chardonnay
   event: rockymtns-2026
   day: Friday
@@ -652,8 +611,8 @@
 - id: sat-the-silent-auction-is-open
   event: rockymtns-2026
   day: Saturday
-  startTime: 10:30 AM
-  endTime: 12:30 PM
+  startTime: 9:00 AM
+  endTime: 4:00 PM
   chatBlock: null
   title: The Silent Auction is OPEN
   host: Volunteers from Winnebago
@@ -662,9 +621,8 @@
   - giving-back
   repeatsOn: []
   description: >-
-    Still time to check on your bids and make some more! All proceeds go directly to Habitat for Humanity's
-    RV Care-A-Vanners, so you're not only buying some cool, you're also doing some good for a deserving
-    charity.🩷 Swing by the auction booth and see all the donations. We've got so many amazing things!
+    Feel free to swing by and check on your bids anytime within these hours. NOTE: This is weather-dependent!
+    During high winds or rains, the silent auction will be closed.
 - id: sat-mod-tours
   event: rockymtns-2026
   day: Saturday
@@ -682,22 +640,19 @@
     the park seeking out the green signs & taking tours. But remember, tours don't only happen during
     the official times here on the schedule! Anytime you feel like putting your green sign out, go for
     it. Anytime you see a green sign, swing in and take a look!
-- id: sat-the-silent-auction-is-open-1
+- id: sat-closing-time-for-the-silent
   event: rockymtns-2026
   day: Saturday
-  startTime: 3:00 PM
-  endTime: 4:30 PM
+  startTime: 4:00 PM
   chatBlock: null
-  title: 'The Silent Auction is OPEN: LAST CHANCE!'
+  title: Closing Time for the Silent Auction
   host: Volunteers from Winnebago
   location: Campsite 148
   categories:
   - giving-back
   repeatsOn: []
   description: >-
-    Last chance to check on your bids! If you win, be prepared to make your payment at the Big Final Gathering
-    at 5pm once you're announced as the winner. Again, no cash or checks will be accepted—credit cards
-    only. Thanks to everyone for your auction donations!
+    Make sure to visit your bids BEFORE closing time!
 - id: sat-the-fbg-final-big-gathering
   event: rockymtns-2026
   day: Saturday
