@@ -1009,6 +1009,56 @@ main { flex: 1; }
 }
 .empty-state a { color: var(--green-mid); }
 
+/* -- Past events this year (chip list) ----------------------- */
+.past-this-year {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--stone);
+}
+
+.past-this-year__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.past-this-year__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--text-light);
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.9rem;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.chip:hover {
+  color: var(--green-mid);
+  border-color: var(--green-mid);
+}
+
+.past-this-year__archive-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--green-mid);
+  text-decoration: none;
+}
+
+.past-this-year__archive-link:hover { text-decoration: underline; }
+
 /* -- About page --------------------------------------------- */
 .about-layout {
   display: grid;

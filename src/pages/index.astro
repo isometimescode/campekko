@@ -6,10 +6,15 @@ import EventCard from '../components/EventCard.astro';
 import siteLogo from '../assets/site-logo.png';
 
 const allEvents = await getCollection('events');
+const currentYear = new Date().getFullYear();
 
 const activeEvents = allEvents
   .filter(r => !r.data.archived)
   .sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+
+const pastEventsThisYear = allEvents
+  .filter(r => r.data.archived && r.data.date.getFullYear() === currentYear)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout
@@ -42,7 +47,7 @@ const activeEvents = allEvents
 
       {activeEvents.length > 0 ? (
         <>
-          <h2 class="section-title">What&#39;s Happening</h2>
+          <h2 class="section-title">On the Calendar</h2>
           <div class="event-grid">
             {activeEvents.map(event => {
               return (
@@ -54,6 +59,18 @@ const activeEvents = allEvents
       ) : (
         <div class="empty-state">
           <p>No upcoming events at the moment. Check back soon, or browse <a href="/archive/">past events</a>.</p>
+        </div>
+      )}
+
+      {pastEventsThisYear.length > 0 && (
+        <div class="past-this-year">
+          <p class="past-this-year__label">Recently Wrapped</p>
+          <div class="past-this-year__chips">
+            {pastEventsThisYear.map(event => (
+              <a href={`/events/${event.id}/`} class="chip">{event.data.title}</a>
+            ))}
+          </div>
+          <a href="/archive/" class="past-this-year__archive-link">See full archive →</a>
         </div>
       )}
 
